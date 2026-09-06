@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useApp, PublicPageView } from '../context/AppContext';
+import { OfficialSeal } from './common/OfficialSeal';
 import { 
   Search, 
   Menu, 
@@ -53,16 +54,14 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTracking }) => {
           onClick={() => navigateTo('home')}
           className="flex items-center gap-3 cursor-pointer group"
         >
-          <div className="w-9 h-9 rounded bg-[#14456F] text-white flex items-center justify-center font-bold text-sm shadow-sm group-hover:bg-[#0B2A4A] transition-colors">
-            <span className="font-display tracking-tight text-white font-bold">AOS</span>
-          </div>
+          <OfficialSeal size={38} />
           <div className="h-6 w-px bg-[#C3CEDA] hidden sm:block"></div>
           <div className="flex flex-col">
             <span className="font-display font-bold text-lg text-[#0B2A4A] uppercase tracking-tight leading-none">
               AgenceOS
             </span>
             <span className="font-mono text-[10px] text-[#545f73] uppercase tracking-wider mt-0.5 font-medium">
-              BURKINA FASO
+              Burkina Faso · Étab. numérique
             </span>
           </div>
         </div>

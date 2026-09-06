@@ -24,13 +24,14 @@ export const WhyUsSection: React.FC = () => {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E1EAF2] text-[#0B2A4A] text-xs font-mono font-bold uppercase tracking-wider mb-4 border border-[#C3CEDA]/50">
             <Target className="w-3.5 h-3.5" />
-            <span>EXCELLENCE OPÉRATIONNELLE & RIGUEUR TECHNIQUE</span>
+            <span>SECTION 02 — ORGANISATION & GOUVERNANCE DE L'AGENCE</span>
           </div>
           <h2 className="font-display font-bold text-3xl sm:text-4xl text-[#0B2A4A] tracking-tight mb-3">
-            Pourquoi confier votre digitalisation à AgenceOS ?
+            L'organisation de l'Agence : rigueur technique et responsabilité
           </h2>
           <p className="text-[#545f73] text-sm sm:text-base leading-relaxed">
-            Une organisation hybride et moderne : l'agilité d'un collectif de spécialistes burkinabè sous la supervision technique directe d'un directeur full-stack.
+            L'Agence repose sur une organisation structurée : un corps de spécialistes burkinabè,
+            placé sous la supervision technique et la responsabilité directe du Directeur fondateur.
           </p>
         </div>
 

@@ -55,13 +55,15 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenQuote })
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E1EAF2] text-[#0B2A4A] text-xs font-mono font-bold uppercase tracking-wider mb-4 border border-[#C3CEDA]/50">
             <span className="w-2 h-2 rounded-full bg-emerald-600"></span>
-            <span>STRUCTURE OFFICIELLE DES PRESTATIONS · AGENCEOS</span>
+            <span>SECTION 01 — STRUCTURE OFFICIELLE DES PRESTATIONS</span>
           </div>
           <h2 className="font-display font-bold text-3xl sm:text-4xl text-[#0B2A4A] tracking-tight mb-4">
-            Nos 4 Pôles d'Ingénierie & de Services
+            Les quatre pôles officiels de prestation de l'Agence
           </h2>
           <p className="text-[#545f73] text-sm sm:text-base leading-relaxed">
-            Une architecture de services claire, rigoureuse et spécialisée. Nous rejetons les discours vagues d'informatique générale pour vous offrir des compétences pointues et des livrables garantis.
+            L'activité de l'Agence est organisée en quatre pôles distincts, chacun doté de compétences
+            dédiées et de livrables définis. Cette structure garantit une prise en charge précise de
+            chaque besoin, sans prestation indéfinie.
           </p>
 
           {/* Interactive Filter Pills */}
