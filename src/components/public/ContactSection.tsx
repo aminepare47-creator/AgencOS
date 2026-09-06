@@ -74,17 +74,18 @@ export const ContactSection: React.FC = () => {
     <section id="contact-section" className="py-20 bg-[#F7F9FC] text-[#131b2e] border-t border-[#D9E2EC]">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         
-        {/* Header Breadcrumb & Title (Stitch Mockup 4 style) */}
+        {/* En-tête de section */}
         <div className="max-w-3xl mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E1EAF2] text-[#0B2A4A] text-xs font-mono font-bold uppercase tracking-wider mb-4 border border-[#C3CEDA]/50">
-            <span className="w-2 h-2 rounded-full bg-emerald-600"></span>
-            <span>DIRECTION GÉNÉRALE DES SERVICES NUMÉRIQUES • BF</span>
-          </div>
+          <p className="font-mono text-xs font-bold uppercase tracking-widest text-[#C9A227] mb-3">
+            Section 03 — Correspondance officielle
+          </p>
           <h1 className="font-display font-bold text-3xl sm:text-4xl text-[#0B2A4A] tracking-tight mb-3">
-            Prendre Contact avec l'Agence
+            Saisir la Direction de l'Agence
           </h1>
           <p className="text-[#545f73] text-sm sm:text-base leading-relaxed">
-            Pour les demandes institutionnelles, projets de transformation numérique, appels d'offres ou partenariats au Burkina Faso et dans la zone UEMOA.
+            Pour toute demande institutionnelle, projet de transformation numérique, appel d'offres
+            ou partenariat au Burkina Faso et dans la zone UEMOA, utilisez le bordereau ci-dessous :
+            il constitue le canal officiel d'entrée de votre demande.
           </p>
         </div>
 
@@ -336,26 +337,23 @@ export const ContactSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Quick Quote Banner */}
-            <div className="bg-[#0B2A4A] text-white rounded-2xl p-6 shadow-sm">
-              <div className="flex items-center gap-2 mb-2">
-                <FileText className="w-4 h-4 text-[#C9DFF2]" />
-                <span className="font-mono text-xs font-bold uppercase tracking-wider text-[#C9DFF2]">
-                  CONFIGURATEUR DE DEVIS
+            {/* Option secondaire : configurateur */}
+            <div className="border border-[#D9E2EC] rounded-xl p-5">
+              <div className="flex items-center gap-2 mb-1.5">
+                <FileText className="w-3.5 h-3.5 text-[#C9A227]" />
+                <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-[#0B2A4A]">
+                  Option complémentaire
                 </span>
               </div>
-              <h4 className="font-display font-bold text-base text-white mb-2">
-                Vous préférez chiffrer vos fonctionnalités ?
-              </h4>
-              <p className="text-xs text-white/80 leading-relaxed mb-4">
-                Utilisez notre simulateur interactif pour sélectionner vos modules et obtenir une estimation budgétaire en Francs CFA (XOF).
+              <p className="text-xs text-[#545f73] leading-relaxed mb-3">
+                Pour une estimation budgétaire immédiate, le configurateur de devis permet de
+                sélectionner vos modules et d'obtenir une estimation en FCFA.
               </p>
               <button
                 onClick={() => setIsQuoteModalOpen(true)}
-                className="w-full py-2.5 px-4 bg-[#C9DFF2] hover:bg-[#A7C7E0] text-[#071A2E] text-xs font-bold rounded-lg transition-colors flex items-center justify-center gap-2 cursor-pointer"
+                className="text-xs font-semibold text-[#14456F] hover:text-[#0B2A4A] underline underline-offset-2 cursor-pointer"
               >
-                <span>Ouvrir le configurateur de devis</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+                Ouvrir le configurateur de devis →
               </button>
             </div>
 
