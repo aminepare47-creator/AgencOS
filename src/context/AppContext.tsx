@@ -131,7 +131,8 @@ const finalizeCollaborateurIdentity = (
   const complet: Collaborateur = {
     ...collab,
     numeroMembre,
-    motDePasse: collab.motDePasse || 'collab123',
+    // Générer un code d'accès initial communiqué par le Directeur au collaborateur
+    motDePasse: collab.motDePasse || `AOS-${Math.floor(1000 + Math.random() * 9000)}`,
     qrCodeData:
       collab.qrCodeData ||
       `AGENCEOS://MEMBER/${numeroMembre}/${collab.nom.toUpperCase().replace(/\s+/g, '-')}`,
@@ -332,7 +333,9 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
     if (found && found.statut === 'actif') {
       const cleanPass = motDePasse ? motDePasse.trim() : '';
-      if (!cleanPass || cleanPass === found.motDePasse || cleanPass === 'collab123' || cleanPass === 'admin') {
+      // Accès strict : le code d'accès personnel doit correspondre exactement
+      // (à remplacer par Supabase Auth lors de la migration base de données)
+      if (cleanPass && cleanPass === found.motDePasse) {
         setCurrentCollaborateur(found);
         setIsCollabSpaceOpen(true);
         return true;
@@ -391,17 +394,17 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     const codeSuivi = `AOS-${prefix}-${randomNum}`;
     const tokenAccesTest = `test-priv-${Date.now()}-${randomNum}`;
     
-    // Find assigned test template
-    const template = testTemplates.find(t => t.posteId === posteId) || testTemplates[0];
+    // Test assigné : peut être absent si aucun test n'est encore configuré pour ce poste
+    const template = testTemplates.find(t => t.posteId === posteId);
 
     const newCandidature: Candidature = {
       id: `cand-${Date.now()}`,
       codeSuivi,
       candidat,
       posteId,
-      statut: 'test_en_cours',
+      statut: template ? 'test_en_cours' : 'recue',
       dateCreation: new Date().toISOString(),
-      testAssigneId: template.id,
+      testAssigneId: template ? template.id : '',
       tokenAccesTest,
       historique: [
         {
@@ -409,11 +412,17 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
           statut: 'recue',
           message: 'Dossier de candidature initial réceptionné avec succès.',
         },
-        {
-          date: new Date().toISOString(),
-          statut: 'test_en_cours',
-          message: `Accès au test privé "${template.titre}" généré. Délai imparti : ${template.delaiJours} jours.`,
-        },
+        ...(template
+          ? [{
+              date: new Date().toISOString(),
+              statut: 'test_en_cours' as StatutCandidature,
+              message: `Accès au test privé "${template.titre}" généré. Délai imparti : ${template.delaiJours} jours.`,
+            }]
+          : [{
+              date: new Date().toISOString(),
+              statut: 'recue' as StatutCandidature,
+              message: 'En attente de la configuration du test par le Directeur pour ce poste.',
+            }]),
       ],
     };
 
@@ -632,6 +641,8 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     localStorage.removeItem(STORAGE_KEYS.CANDIDATURES);
     localStorage.removeItem(STORAGE_KEYS.COLLABORATEURS);
     localStorage.removeItem(STORAGE_KEYS.DEVIS);
+    localStorage.removeItem(STORAGE_KEYS.TACHES);
+    localStorage.removeItem(STORAGE_KEYS.CURRENT_COLLAB);
   };
 
   return (

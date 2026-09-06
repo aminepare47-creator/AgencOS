@@ -97,30 +97,6 @@ export const TrackApplicationModal: React.FC<TrackApplicationModalProps> = ({
             </button>
           </form>
 
-          {/* Quick suggestions for demo */}
-          {!searched && (
-            <div className="p-4 rounded-xl bg-[#faf8ff] border border-[#e2e7ff] text-xs text-[#545f73]">
-              <span className="font-bold text-[#003629] block mb-2 font-mono uppercase text-[10px]">
-                Dossiers de démonstration pré-chargés :
-              </span>
-              <div className="flex flex-wrap gap-2">
-                {candidatures.slice(0, 3).map(c => (
-                  <button
-                    key={c.id}
-                    type="button"
-                    onClick={() => {
-                      setSearchQuery(c.codeSuivi);
-                      setSearched(true);
-                    }}
-                    className="px-2.5 py-1 rounded bg-white border border-[#c0c9c3] hover:border-[#1b4d3e] text-[#003629] font-mono text-[11px] font-bold cursor-pointer transition-colors"
-                  >
-                    {c.codeSuivi} ({c.statut})
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-
           {/* Search Results */}
           {searched && (
             foundCandidature ? (

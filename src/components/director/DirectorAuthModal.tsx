@@ -17,9 +17,15 @@ export const DirectorAuthModal: React.FC<DirectorAuthModalProps> = ({ isOpen, on
 
   const handleVerify = (e: React.FormEvent) => {
     e.preventDefault();
-    const cleanKey = accessKey.trim().toLowerCase();
-    // Accepted security keys: 'directeur', 'admin', 'aos2025', or simply empty submit
-    if (cleanKey === 'directeur' || cleanKey === 'admin' || cleanKey === 'aos2025' || cleanKey === '') {
+    // Clé d'accès définie par le Directeur via la variable d'environnement
+    // VITE_DIRECTEUR_ACCESS_KEY (aucune clé en dur dans le code).
+    // À remplacer par Supabase Auth lors de la migration base de données.
+    const expectedKey = (import.meta.env.VITE_DIRECTEUR_ACCESS_KEY as string | undefined)?.trim().toLowerCase();
+    if (!expectedKey) {
+      setError(true);
+      return;
+    }
+    if (accessKey.trim().toLowerCase() === expectedKey) {
       setIsDirectorMode(true);
       onClose();
       setAccessKey('');
@@ -61,18 +67,13 @@ export const DirectorAuthModal: React.FC<DirectorAuthModalProps> = ({ isOpen, on
           </p>
 
           <div className="space-y-1.5">
-            <div className="flex items-center justify-between">
-              <label className="text-xs font-mono font-bold text-[#131b2e] block">
-                Mot de passe / Clé d'accès
-              </label>
-              <span className="text-[10px] font-mono text-[#1b4d3e] font-semibold bg-[#eaedff] px-2 py-0.5 rounded">
-                Mot de passe : directeur
-              </span>
-            </div>
+            <label className="text-xs font-mono font-bold text-[#131b2e] block">
+              Mot de passe / Clé d'accès
+            </label>
             <div className="relative">
               <input
                 type={showPassword ? 'text' : 'password'}
-                placeholder="Entrez 'directeur' ou 'admin'..."
+                placeholder="Clé d'accès confidentielle..."
                 value={accessKey}
                 onChange={(e) => {
                   setAccessKey(e.target.value);
@@ -90,14 +91,10 @@ export const DirectorAuthModal: React.FC<DirectorAuthModalProps> = ({ isOpen, on
                 {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
               </button>
             </div>
-            {error ? (
+            {error && (
               <p className="text-[11px] text-red-600 flex items-center gap-1 mt-1">
                 <AlertCircle className="w-3.5 h-3.5 shrink-0" />
-                <span>Mot de passe incorrect. Tapez <strong>directeur</strong> ou <strong>admin</strong>.</span>
-              </p>
-            ) : (
-              <p className="text-[10px] text-[#707974]">
-                Mots de passe valides : <code className="text-[#003629] font-bold">directeur</code> ou <code className="text-[#003629] font-bold">admin</code> (ou cliquez directement sur Accéder).
+                <span>Clé d'accès incorrecte. Contactez le fondateur si vous avez perdu votre accès.</span>
               </p>
             )}
           </div>

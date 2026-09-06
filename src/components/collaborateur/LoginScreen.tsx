@@ -44,7 +44,7 @@ export const LoginScreen: React.FC = () => {
               type="text"
               value={identifiant}
               onChange={(e) => setIdentifiant(e.target.value)}
-              placeholder="ex : aicha.guira@agenceos.bf ou AOS-MBR-2026-003"
+              placeholder="Email ou numéro de membre"
               className="w-full border border-[#c0c9c3] rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:border-[#1b4d3e] focus:ring-1 focus:ring-[#1b4d3e]"
               required
             />
