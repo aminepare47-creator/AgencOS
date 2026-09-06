@@ -6,3 +6,7 @@ coverage/
 *.log
 .env*
 !.env.example
+*.log
+tsc_log.txt
+build_log.txt
+npm_log.txt
