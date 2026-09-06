@@ -39,15 +39,15 @@ export const CollaborateurSpace: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#f7f8fc] font-sans">
-      <header className="bg-[#002117] text-white">
+      <header className="bg-[#071A2E] text-white">
         <div className="max-w-[1100px] mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4 flex-wrap">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-lg bg-[#baeed9] text-[#002117] flex items-center justify-center font-bold text-sm">
+            <div className="w-9 h-9 rounded-lg bg-[#C9DFF2] text-[#071A2E] flex items-center justify-center font-bold text-sm">
               {currentCollaborateur.nom.split(' ').map(n => n[0]).join('').slice(0, 2)}
             </div>
             <div>
               <p className="font-bold text-sm leading-tight">{currentCollaborateur.nom}</p>
-              <p className="text-[11px] text-[#baeed9]">{poste?.nom}</p>
+              <p className="text-[11px] text-[#C9DFF2]">{poste?.nom}</p>
             </div>
           </div>
           <div className="flex items-center gap-2">
@@ -59,7 +59,7 @@ export const CollaborateurSpace: React.FC = () => {
             </button>
             <button
               onClick={logoutCollaborateur}
-              className="inline-flex items-center gap-1.5 text-xs px-3 py-2 rounded-lg bg-[#baeed9] hover:bg-[#9ed1bd] text-[#002117] font-semibold cursor-pointer"
+              className="inline-flex items-center gap-1.5 text-xs px-3 py-2 rounded-lg bg-[#C9DFF2] hover:bg-[#A7C7E0] text-[#071A2E] font-semibold cursor-pointer"
             >
               <LogOut className="w-3.5 h-3.5" /> Déconnexion
             </button>
@@ -71,7 +71,7 @@ export const CollaborateurSpace: React.FC = () => {
               key={t.id}
               onClick={() => setTab(t.id)}
               className={`flex items-center gap-2 text-xs font-semibold px-4 py-2.5 rounded-t-lg transition-colors cursor-pointer whitespace-nowrap ${
-                tab === t.id ? 'bg-[#f7f8fc] text-[#003629]' : 'text-white/70 hover:text-white'
+                tab === t.id ? 'bg-[#f7f8fc] text-[#0B2A4A]' : 'text-white/70 hover:text-white'
               }`}
             >
               {t.icon} {t.label}
@@ -90,20 +90,20 @@ export const CollaborateurSpace: React.FC = () => {
                 { label: 'Projets livrés', value: historique.length, icon: <CheckCircle2 className="w-5 h-5" /> },
                 { label: 'Heures cumulées', value: `${totalHeures} h`, icon: <Clock className="w-5 h-5" /> },
               ].map((s, i) => (
-                <div key={i} className="rounded-xl bg-white border border-[#e2e7ff] p-5">
-                  <div className="w-9 h-9 rounded-lg bg-[#f2f3ff] text-[#1b4d3e] flex items-center justify-center mb-3">
+                <div key={i} className="rounded-xl bg-white border border-[#D9E2EC] p-5">
+                  <div className="w-9 h-9 rounded-lg bg-[#EEF3F8] text-[#14456F] flex items-center justify-center mb-3">
                     {s.icon}
                   </div>
-                  <p className="font-display font-bold text-2xl text-[#003629]">{s.value}</p>
+                  <p className="font-display font-bold text-2xl text-[#0B2A4A]">{s.value}</p>
                   <p className="text-[11px] text-[#545f73]">{s.label}</p>
                 </div>
               ))}
             </div>
 
             <div>
-              <h3 className="font-display font-bold text-lg text-[#003629] mb-3">Mes tâches assignées</h3>
+              <h3 className="font-display font-bold text-lg text-[#0B2A4A] mb-3">Mes tâches assignées</h3>
               {enCours.length === 0 ? (
-                <p className="text-sm text-[#545f73] bg-white border border-[#e2e7ff] rounded-xl p-6 text-center">
+                <p className="text-sm text-[#545f73] bg-white border border-[#D9E2EC] rounded-xl p-6 text-center">
                   Aucune tâche active pour le moment. Le Directeur vous assignera prochainement de nouvelles missions.
                 </p>
               ) : (
@@ -115,7 +115,7 @@ export const CollaborateurSpace: React.FC = () => {
 
             {enRevue.length > 0 && (
               <div>
-                <h3 className="font-display font-bold text-lg text-[#003629] mb-3">En attente de validation</h3>
+                <h3 className="font-display font-bold text-lg text-[#0B2A4A] mb-3">En attente de validation</h3>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                   {enRevue.map(t => <TacheCard key={t.id} tache={t} />)}
                 </div>
@@ -126,11 +126,11 @@ export const CollaborateurSpace: React.FC = () => {
 
         {tab === 'historique' && (
           <div>
-            <h3 className="font-display font-bold text-lg text-[#003629] mb-3">
+            <h3 className="font-display font-bold text-lg text-[#0B2A4A] mb-3">
               Historique des livraisons ({historique.length})
             </h3>
             {historique.length === 0 ? (
-              <p className="text-sm text-[#545f73] bg-white border border-[#e2e7ff] rounded-xl p-6 text-center">
+              <p className="text-sm text-[#545f73] bg-white border border-[#D9E2EC] rounded-xl p-6 text-center">
                 Aucune tâche livrée pour l'instant.
               </p>
             ) : (

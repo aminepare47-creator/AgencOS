@@ -37,18 +37,18 @@ export const DirectorAuthModal: React.FC<DirectorAuthModalProps> = ({ isOpen, on
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs font-sans">
-      <div className="relative w-full max-w-sm bg-white rounded-2xl shadow-2xl border border-[#e2e7ff] overflow-hidden text-[#131b2e]">
+      <div className="relative w-full max-w-sm bg-white rounded-2xl shadow-2xl border border-[#D9E2EC] overflow-hidden text-[#131b2e]">
         
         {/* Header */}
-        <div className="bg-[#002117] text-white p-6 pb-5">
+        <div className="bg-[#071A2E] text-white p-6 pb-5">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-[#baeed9] text-[#002117] flex items-center justify-center font-bold">
-                <Lock className="w-4 h-4 text-[#002117]" />
+              <div className="w-8 h-8 rounded-lg bg-[#C9DFF2] text-[#071A2E] flex items-center justify-center font-bold">
+                <Lock className="w-4 h-4 text-[#071A2E]" />
               </div>
               <div>
                 <h3 className="text-sm font-bold font-display text-white">Espace Direction AgenceOS</h3>
-                <p className="text-[10px] font-mono text-[#baeed9]">Portail d'administration interne</p>
+                <p className="text-[10px] font-mono text-[#C9DFF2]">Portail d'administration interne</p>
               </div>
             </div>
             <button
@@ -80,7 +80,7 @@ export const DirectorAuthModal: React.FC<DirectorAuthModalProps> = ({ isOpen, on
                   setError(false);
                 }}
                 autoFocus
-                className="w-full px-3.5 py-2.5 rounded-lg border border-[#c0c9c3] focus:border-[#1b4d3e] text-xs font-mono pr-10 focus:outline-none"
+                className="w-full px-3.5 py-2.5 rounded-lg border border-[#C3CEDA] focus:border-[#14456F] text-xs font-mono pr-10 focus:outline-none"
               />
               <button
                 type="button"
@@ -103,22 +103,22 @@ export const DirectorAuthModal: React.FC<DirectorAuthModalProps> = ({ isOpen, on
             <button
               type="button"
               onClick={onClose}
-              className="w-1/2 py-2.5 px-3 rounded-lg border border-[#c0c9c3] text-xs font-semibold text-[#545f73] hover:bg-[#faf8ff] transition-colors cursor-pointer text-center"
+              className="w-1/2 py-2.5 px-3 rounded-lg border border-[#C3CEDA] text-xs font-semibold text-[#545f73] hover:bg-[#F7F9FC] transition-colors cursor-pointer text-center"
             >
               Annuler
             </button>
             <button
               type="submit"
-              className="w-1/2 py-2.5 px-3 rounded-lg bg-[#1b4d3e] hover:bg-[#003629] text-white text-xs font-bold transition-colors flex items-center justify-center gap-1.5 cursor-pointer shadow-sm"
+              className="w-1/2 py-2.5 px-3 rounded-lg bg-[#14456F] hover:bg-[#0B2A4A] text-white text-xs font-bold transition-colors flex items-center justify-center gap-1.5 cursor-pointer shadow-sm"
             >
               <span>Accéder</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </button>
           </div>
 
-          <div className="text-center pt-1 border-t border-[#e2e7ff]">
+          <div className="text-center pt-1 border-t border-[#D9E2EC]">
             <span className="text-[10px] font-mono text-[#545f73] block mt-2">
-              Raccourci clavier direct : <strong className="text-[#1b4d3e]">Alt + Shift + D</strong>
+              Raccourci clavier direct : <strong className="text-[#14456F]">Alt + Shift + D</strong>
             </span>
           </div>
         </form>

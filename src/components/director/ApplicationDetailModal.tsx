@@ -56,12 +56,12 @@ export const ApplicationDetailModal: React.FC<ApplicationDetailModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs overflow-y-auto font-sans">
-      <div className="relative w-full max-w-3xl bg-white rounded-2xl shadow-xl border border-[#e2e7ff] overflow-hidden my-8 text-[#131b2e]">
+      <div className="relative w-full max-w-3xl bg-white rounded-2xl shadow-xl border border-[#D9E2EC] overflow-hidden my-8 text-[#131b2e]">
         
         {/* Modal Top Bar */}
-        <div className="bg-[#003629] text-white px-6 py-4 flex items-center justify-between">
+        <div className="bg-[#0B2A4A] text-white px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-[#baeed9] text-[#002117] flex items-center justify-center font-bold text-xs font-mono">
+            <div className="w-8 h-8 rounded-lg bg-[#C9DFF2] text-[#071A2E] flex items-center justify-center font-bold text-xs font-mono">
               {cand.codeSuivi.split('-')[1]}
             </div>
             <div>
@@ -70,7 +70,7 @@ export const ApplicationDetailModal: React.FC<ApplicationDetailModalProps> = ({
                 <StatusBadge statut={cand.statut} />
               </div>
               <p className="text-[11px] text-white/70">
-                Code Suivi : <span className="font-mono text-[#baeed9] font-bold">{cand.codeSuivi}</span> · {poste?.nom}
+                Code Suivi : <span className="font-mono text-[#C9DFF2] font-bold">{cand.codeSuivi}</span> · {poste?.nom}
               </p>
             </div>
           </div>
@@ -85,7 +85,7 @@ export const ApplicationDetailModal: React.FC<ApplicationDetailModalProps> = ({
 
         {/* Feedback Alert if action performed */}
         {successFeedback && (
-          <div className="p-4 bg-[#baeed9] border-b border-emerald-300 text-[#002117] text-xs font-bold flex items-center gap-2 font-mono">
+          <div className="p-4 bg-[#C9DFF2] border-b border-emerald-300 text-[#071A2E] text-xs font-bold flex items-center gap-2 font-mono">
             <CheckCircle2 className="w-4 h-4 text-emerald-800" />
             <span>{successFeedback}</span>
           </div>
@@ -95,9 +95,9 @@ export const ApplicationDetailModal: React.FC<ApplicationDetailModalProps> = ({
         <div className="p-6 sm:p-8 space-y-6 max-h-[75vh] overflow-y-auto">
           
           {/* Candidate Profile Summary */}
-          <div className="bg-[#faf8ff] p-5 rounded-xl border border-[#e2e7ff]">
-            <h4 className="text-xs font-bold text-[#003629] uppercase tracking-wider mb-3 flex items-center gap-1.5 font-mono">
-              <User className="w-3.5 h-3.5 text-[#003629]" />
+          <div className="bg-[#F7F9FC] p-5 rounded-xl border border-[#D9E2EC]">
+            <h4 className="text-xs font-bold text-[#0B2A4A] uppercase tracking-wider mb-3 flex items-center gap-1.5 font-mono">
+              <User className="w-3.5 h-3.5 text-[#0B2A4A]" />
               Profil & Coordonnées du Candidat
             </h4>
 
@@ -118,13 +118,13 @@ export const ApplicationDetailModal: React.FC<ApplicationDetailModalProps> = ({
 
             {/* Links */}
             {(cand.candidat.portfolioUrl || cand.candidat.githubUrl) && (
-              <div className="flex flex-wrap gap-2 pt-3 border-t border-[#e2e7ff] text-xs">
+              <div className="flex flex-wrap gap-2 pt-3 border-t border-[#D9E2EC] text-xs">
                 {cand.candidat.portfolioUrl && (
                   <a
                     href={cand.candidat.portfolioUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-1 text-[#003629] hover:underline font-bold bg-white px-3 py-1 rounded-lg border border-[#c0c9c3] font-mono"
+                    className="inline-flex items-center gap-1 text-[#0B2A4A] hover:underline font-bold bg-white px-3 py-1 rounded-lg border border-[#C3CEDA] font-mono"
                   >
                     <ExternalLink className="w-3 h-3" />
                     <span>Portfolio / Liens</span>
@@ -135,7 +135,7 @@ export const ApplicationDetailModal: React.FC<ApplicationDetailModalProps> = ({
                     href={cand.candidat.githubUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-1 text-[#545f73] hover:text-[#131b2e] font-semibold bg-white px-3 py-1 rounded-lg border border-[#c0c9c3] font-mono"
+                    className="inline-flex items-center gap-1 text-[#545f73] hover:text-[#131b2e] font-semibold bg-white px-3 py-1 rounded-lg border border-[#C3CEDA] font-mono"
                   >
                     <ExternalLink className="w-3 h-3" />
                     <span>Profil GitHub / Pro</span>
@@ -145,7 +145,7 @@ export const ApplicationDetailModal: React.FC<ApplicationDetailModalProps> = ({
             )}
 
             {cand.candidat.presentation && (
-              <div className="mt-3 pt-3 border-t border-[#e2e7ff] text-xs text-[#545f73]">
+              <div className="mt-3 pt-3 border-t border-[#D9E2EC] text-xs text-[#545f73]">
                 <span className="font-bold text-[#131b2e]">Motivation : </span>
                 {cand.candidat.presentation}
               </div>
@@ -153,10 +153,10 @@ export const ApplicationDetailModal: React.FC<ApplicationDetailModalProps> = ({
           </div>
 
           {/* Test Assigné & Consignes */}
-          <div className="border border-[#e2e7ff] rounded-xl p-5 bg-[#faf8ff] space-y-2">
+          <div className="border border-[#D9E2EC] rounded-xl p-5 bg-[#F7F9FC] space-y-2">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-bold text-[#003629] uppercase tracking-wider flex items-center gap-1.5 font-mono">
-                <FileText className="w-3.5 h-3.5 text-[#1b4d3e]" />
+              <span className="text-xs font-bold text-[#0B2A4A] uppercase tracking-wider flex items-center gap-1.5 font-mono">
+                <FileText className="w-3.5 h-3.5 text-[#14456F]" />
                 Épreuve technique attribuée
               </span>
               <span className="text-[11px] text-[#707974] font-medium font-mono">
@@ -164,16 +164,16 @@ export const ApplicationDetailModal: React.FC<ApplicationDetailModalProps> = ({
               </span>
             </div>
             <h4 className="text-sm font-bold text-[#131b2e] font-display">{testTemplate?.titre}</h4>
-            <div className="text-xs text-[#545f73] bg-white p-3.5 rounded-lg leading-relaxed whitespace-pre-line border border-[#e2e7ff]">
+            <div className="text-xs text-[#545f73] bg-white p-3.5 rounded-lg leading-relaxed whitespace-pre-line border border-[#D9E2EC]">
               {testTemplate?.consignes}
             </div>
           </div>
 
           {/* Solution Soumise par le Candidat */}
-          <div className="border border-[#e2e7ff] rounded-xl p-5 bg-white space-y-4">
-            <div className="flex items-center justify-between border-b border-[#e2e7ff] pb-3">
-              <h4 className="text-xs font-bold text-[#003629] uppercase tracking-wider flex items-center gap-1.5 font-mono">
-                <Clock className="w-3.5 h-3.5 text-[#1b4d3e]" />
+          <div className="border border-[#D9E2EC] rounded-xl p-5 bg-white space-y-4">
+            <div className="flex items-center justify-between border-b border-[#D9E2EC] pb-3">
+              <h4 className="text-xs font-bold text-[#0B2A4A] uppercase tracking-wider flex items-center gap-1.5 font-mono">
+                <Clock className="w-3.5 h-3.5 text-[#14456F]" />
                 Rendu soumis par le candidat
               </h4>
               {cand.soumission && (
@@ -195,7 +195,7 @@ export const ApplicationDetailModal: React.FC<ApplicationDetailModalProps> = ({
                   <span className="text-[11px] font-bold text-[#131b2e] uppercase tracking-wider block mb-1 font-mono">
                     Explication & Réponses rédigées :
                   </span>
-                  <div className="p-4 rounded-xl bg-[#faf8ff] border border-[#e2e7ff] text-xs text-[#131b2e] whitespace-pre-line leading-relaxed font-sans">
+                  <div className="p-4 rounded-xl bg-[#F7F9FC] border border-[#D9E2EC] text-xs text-[#131b2e] whitespace-pre-line leading-relaxed font-sans">
                     {cand.soumission.contenuTexte || '(Aucune explication texte)'}
                   </div>
                 </div>
@@ -213,7 +213,7 @@ export const ApplicationDetailModal: React.FC<ApplicationDetailModalProps> = ({
                           href={link}
                           target="_blank"
                           rel="noreferrer"
-                          className="flex items-center justify-between p-3 rounded-lg border border-[#c0c9c3] bg-[#faf8ff] hover:bg-white text-xs text-[#003629] font-bold transition-colors font-mono"
+                          className="flex items-center justify-between p-3 rounded-lg border border-[#C3CEDA] bg-[#F7F9FC] hover:bg-white text-xs text-[#0B2A4A] font-bold transition-colors font-mono"
                         >
                           <span className="truncate">{link}</span>
                           <ExternalLink className="w-3.5 h-3.5 shrink-0 ml-2" />
@@ -229,13 +229,13 @@ export const ApplicationDetailModal: React.FC<ApplicationDetailModalProps> = ({
                     <span className="text-[11px] font-bold text-[#131b2e] uppercase tracking-wider block mb-1 font-mono">
                       Fichier joint :
                     </span>
-                    <div className="p-3 rounded-lg border border-[#e2e7ff] bg-[#faf8ff] flex items-center justify-between text-xs">
+                    <div className="p-3 rounded-lg border border-[#D9E2EC] bg-[#F7F9FC] flex items-center justify-between text-xs">
                       <div className="flex items-center gap-2 text-[#131b2e] font-semibold">
-                        <FileText className="w-4 h-4 text-[#003629]" />
+                        <FileText className="w-4 h-4 text-[#0B2A4A]" />
                         <span>{cand.soumission.nomFichierSimule}</span>
                         <span className="text-[#707974] font-mono">({cand.soumission.tailleFichierSimule || 'Archive'})</span>
                       </div>
-                      <span className="text-[11px] text-[#002117] font-bold bg-[#baeed9] border border-emerald-300 px-2.5 py-0.5 rounded font-mono">
+                      <span className="text-[11px] text-[#071A2E] font-bold bg-[#C9DFF2] border border-emerald-300 px-2.5 py-0.5 rounded font-mono">
                         Téléchargement prêt
                       </span>
                     </div>
@@ -243,18 +243,18 @@ export const ApplicationDetailModal: React.FC<ApplicationDetailModalProps> = ({
                 )}
               </div>
             ) : (
-              <div className="py-6 text-center text-xs text-[#545f73] bg-[#faf8ff] rounded-lg border border-[#e2e7ff]">
-                <Clock className="w-6 h-6 text-[#1b4d3e] mx-auto mb-1 animate-pulse" />
-                <p className="font-bold text-[#003629]">Test en cours de réalisation</p>
+              <div className="py-6 text-center text-xs text-[#545f73] bg-[#F7F9FC] rounded-lg border border-[#D9E2EC]">
+                <Clock className="w-6 h-6 text-[#14456F] mx-auto mb-1 animate-pulse" />
+                <p className="font-bold text-[#0B2A4A]">Test en cours de réalisation</p>
                 <p className="text-[#707974] mt-0.5">Le candidat n'a pas encore validé sa soumission.</p>
               </div>
             )}
           </div>
 
           {/* Section Délibération & Actions du Directeur */}
-          <div className="p-5 sm:p-6 rounded-xl bg-[#faf8ff] space-y-4 border border-[#e2e7ff]">
-            <h4 className="text-xs font-bold text-[#003629] uppercase tracking-wider flex items-center gap-2 font-mono">
-              <Award className="w-4 h-4 text-[#1b4d3e]" />
+          <div className="p-5 sm:p-6 rounded-xl bg-[#F7F9FC] space-y-4 border border-[#D9E2EC]">
+            <h4 className="text-xs font-bold text-[#0B2A4A] uppercase tracking-wider flex items-center gap-2 font-mono">
+              <Award className="w-4 h-4 text-[#14456F]" />
               Délibération & Homologation du Directeur
             </h4>
 
@@ -270,7 +270,7 @@ export const ApplicationDetailModal: React.FC<ApplicationDetailModalProps> = ({
                   max={20}
                   value={noteInput}
                   onChange={(e) => setNoteInput(Number(e.target.value))}
-                  className="w-full px-3.5 py-2 rounded-lg bg-white border border-[#c0c9c3] text-[#003629] text-base font-bold text-center focus:outline-none focus:border-[#1b4d3e] font-mono"
+                  className="w-full px-3.5 py-2 rounded-lg bg-white border border-[#C3CEDA] text-[#0B2A4A] text-base font-bold text-center focus:outline-none focus:border-[#14456F] font-mono"
                 />
               </div>
 
@@ -284,7 +284,7 @@ export const ApplicationDetailModal: React.FC<ApplicationDetailModalProps> = ({
                   placeholder="Ex: Excellente rigueur mobile-first, respect des critères burkinabè."
                   value={commentInput}
                   onChange={(e) => setCommentInput(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-[#c0c9c3] text-xs text-[#131b2e] focus:outline-none focus:border-[#1b4d3e] placeholder:text-[#707974]"
+                  className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-[#C3CEDA] text-xs text-[#131b2e] focus:outline-none focus:border-[#14456F] placeholder:text-[#707974]"
                 />
               </div>
             </div>
@@ -295,7 +295,7 @@ export const ApplicationDetailModal: React.FC<ApplicationDetailModalProps> = ({
                 id="btn-valider-collaborateur"
                 type="button"
                 onClick={() => handleAction('valider')}
-                className="flex-1 sm:flex-none px-5 py-2.5 rounded-lg bg-[#1b4d3e] hover:bg-[#003629] text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-xs transition-colors cursor-pointer"
+                className="flex-1 sm:flex-none px-5 py-2.5 rounded-lg bg-[#14456F] hover:bg-[#0B2A4A] text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-xs transition-colors cursor-pointer"
               >
                 <CheckCircle2 className="w-4 h-4 text-white" />
                 <span>Valider et intégrer comme Collaborateur</span>
@@ -305,9 +305,9 @@ export const ApplicationDetailModal: React.FC<ApplicationDetailModalProps> = ({
                 id="btn-demander-revision"
                 type="button"
                 onClick={() => handleAction('demander_complement')}
-                className="flex-1 sm:flex-none px-4 py-2.5 rounded-lg bg-white hover:bg-[#eaedff] text-[#003629] font-bold text-xs border border-[#c0c9c3] transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                className="flex-1 sm:flex-none px-4 py-2.5 rounded-lg bg-white hover:bg-[#E1EAF2] text-[#0B2A4A] font-bold text-xs border border-[#C3CEDA] transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
               >
-                <HelpCircle className="w-3.5 h-3.5 text-[#003629]" />
+                <HelpCircle className="w-3.5 h-3.5 text-[#0B2A4A]" />
                 <span>Demander un complément</span>
               </button>
 

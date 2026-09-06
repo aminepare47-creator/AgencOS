@@ -71,16 +71,16 @@ export const ContactSection: React.FC = () => {
   ];
 
   return (
-    <section id="contact-section" className="py-20 bg-[#faf8ff] text-[#131b2e] border-t border-[#e2e7ff]">
+    <section id="contact-section" className="py-20 bg-[#F7F9FC] text-[#131b2e] border-t border-[#D9E2EC]">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         
         {/* Header Breadcrumb & Title (Stitch Mockup 4 style) */}
         <div className="max-w-3xl mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#eaedff] text-[#003629] text-xs font-mono font-bold uppercase tracking-wider mb-4 border border-[#c0c9c3]/50">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E1EAF2] text-[#0B2A4A] text-xs font-mono font-bold uppercase tracking-wider mb-4 border border-[#C3CEDA]/50">
             <span className="w-2 h-2 rounded-full bg-emerald-600"></span>
             <span>DIRECTION GÉNÉRALE DES SERVICES NUMÉRIQUES • BF</span>
           </div>
-          <h1 className="font-display font-bold text-3xl sm:text-4xl text-[#003629] tracking-tight mb-3">
+          <h1 className="font-display font-bold text-3xl sm:text-4xl text-[#0B2A4A] tracking-tight mb-3">
             Prendre Contact avec l'Agence
           </h1>
           <p className="text-[#545f73] text-sm sm:text-base leading-relaxed">
@@ -92,12 +92,12 @@ export const ContactSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-20">
           
           {/* Left Column (7 cols): Bordereau de Liaison */}
-          <div className="lg:col-span-7 bg-white rounded-2xl border border-[#e2e7ff] p-6 sm:p-8 shadow-xs">
-            <div className="border-b border-[#e2e7ff] pb-4 mb-6">
-              <span className="font-mono text-xs uppercase tracking-wider text-[#1b4d3e] font-bold">
+          <div className="lg:col-span-7 bg-white rounded-2xl border border-[#D9E2EC] p-6 sm:p-8 shadow-xs">
+            <div className="border-b border-[#D9E2EC] pb-4 mb-6">
+              <span className="font-mono text-xs uppercase tracking-wider text-[#C9A227] font-bold">
                 BORDEREAU DE LIAISON & DEMANDE D'ENTRETIEN
               </span>
-              <h2 className="font-display font-bold text-xl sm:text-2xl text-[#003629] mt-1">
+              <h2 className="font-display font-bold text-xl sm:text-2xl text-[#0B2A4A] mt-1">
                 Formulaire officiel de transmission directe
               </h2>
               <p className="text-xs text-[#545f73] mt-1">
@@ -107,10 +107,10 @@ export const ContactSection: React.FC = () => {
 
             {submitted ? (
               <div className="py-12 text-center space-y-4">
-                <div className="w-16 h-16 rounded-full bg-[#baeed9] text-[#003629] flex items-center justify-center mx-auto">
+                <div className="w-16 h-16 rounded-full bg-[#C9DFF2] text-[#0B2A4A] flex items-center justify-center mx-auto">
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
-                <h3 className="font-display font-bold text-xl text-[#003629]">
+                <h3 className="font-display font-bold text-xl text-[#0B2A4A]">
                   Demande transmise avec succès
                 </h3>
                 <p className="text-xs sm:text-sm text-[#545f73] max-w-md mx-auto leading-relaxed">
@@ -131,7 +131,7 @@ export const ContactSection: React.FC = () => {
                         consentementCil: true,
                       });
                     }}
-                    className="px-5 py-2.5 bg-[#f2f3ff] hover:bg-[#eaedff] text-[#003629] text-xs font-bold rounded-lg border border-[#c0c9c3] transition-colors cursor-pointer"
+                    className="px-5 py-2.5 bg-[#EEF3F8] hover:bg-[#E1EAF2] text-[#0B2A4A] text-xs font-bold rounded-lg border border-[#C3CEDA] transition-colors cursor-pointer"
                   >
                     Envoyer une autre demande
                   </button>
@@ -151,7 +151,7 @@ export const ContactSection: React.FC = () => {
                       placeholder="Ex: Seydou Traoré"
                       value={formData.nom}
                       onChange={(e) => setFormData({ ...formData, nom: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-lg border border-[#c0c9c3] bg-[#faf8ff] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#1b4d3e] focus:bg-white"
+                      className="w-full px-3.5 py-2.5 rounded-lg border border-[#C3CEDA] bg-[#F7F9FC] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#14456F] focus:bg-white"
                     />
                   </div>
 
@@ -166,7 +166,7 @@ export const ContactSection: React.FC = () => {
                       placeholder="Ex: s.traore@entreprise.bf"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-lg border border-[#c0c9c3] bg-[#faf8ff] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#1b4d3e] focus:bg-white"
+                      className="w-full px-3.5 py-2.5 rounded-lg border border-[#C3CEDA] bg-[#F7F9FC] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#14456F] focus:bg-white"
                     />
                   </div>
                 </div>
@@ -182,7 +182,7 @@ export const ContactSection: React.FC = () => {
                       placeholder="Ex: Société Sahélienne de Commerce"
                       value={formData.entite}
                       onChange={(e) => setFormData({ ...formData, entite: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-lg border border-[#c0c9c3] bg-[#faf8ff] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#1b4d3e] focus:bg-white"
+                      className="w-full px-3.5 py-2.5 rounded-lg border border-[#C3CEDA] bg-[#F7F9FC] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#14456F] focus:bg-white"
                     />
                   </div>
 
@@ -197,7 +197,7 @@ export const ContactSection: React.FC = () => {
                       placeholder="+226 70 00 00 00"
                       value={formData.telephone}
                       onChange={(e) => setFormData({ ...formData, telephone: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-lg border border-[#c0c9c3] bg-[#faf8ff] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#1b4d3e] focus:bg-white font-mono"
+                      className="w-full px-3.5 py-2.5 rounded-lg border border-[#C3CEDA] bg-[#F7F9FC] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#14456F] focus:bg-white font-mono"
                     />
                   </div>
                 </div>
@@ -210,7 +210,7 @@ export const ContactSection: React.FC = () => {
                     id="contact-objet"
                     value={formData.objet}
                     onChange={(e) => setFormData({ ...formData, objet: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-lg border border-[#c0c9c3] bg-[#faf8ff] text-xs text-[#131b2e] focus:outline-none focus:border-[#1b4d3e] focus:bg-white"
+                    className="w-full px-3.5 py-2.5 rounded-lg border border-[#C3CEDA] bg-[#F7F9FC] text-xs text-[#131b2e] focus:outline-none focus:border-[#14456F] focus:bg-white"
                   >
                     <option value="Offre A : Digitalisation Complète A à Z">Offre A : Digitalisation Complète (Fondation A à Z)</option>
                     <option value="Offre B : Boost Digital & Performance">Offre B : Boost Digital (Accompagnement & Réseaux)</option>
@@ -232,7 +232,7 @@ export const ContactSection: React.FC = () => {
                     placeholder="Précisez votre activité, vos objectifs, les contraintes éventuelles ou votre calendrier souhaité..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-lg border border-[#c0c9c3] bg-[#faf8ff] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#1b4d3e] focus:bg-white"
+                    className="w-full px-3.5 py-2.5 rounded-lg border border-[#C3CEDA] bg-[#F7F9FC] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#14456F] focus:bg-white"
                   />
                 </div>
 
@@ -242,7 +242,7 @@ export const ContactSection: React.FC = () => {
                     type="checkbox"
                     checked={formData.consentementCil}
                     onChange={(e) => setFormData({ ...formData, consentementCil: e.target.checked })}
-                    className="mt-0.5 rounded border-[#c0c9c3] text-[#1b4d3e] focus:ring-[#1b4d3e]"
+                    className="mt-0.5 rounded border-[#C3CEDA] text-[#14456F] focus:ring-[#14456F]"
                   />
                   <label htmlFor="contact-cil" className="text-[11px] text-[#545f73] leading-relaxed">
                     J'autorise AgenceOS à traiter ces données conformément aux dispositions de la loi N°001-2021/AN du Burkina Faso relative à la protection des données personnelles (CIL).
@@ -252,7 +252,7 @@ export const ContactSection: React.FC = () => {
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="w-full py-3.5 px-4 bg-[#1b4d3e] hover:bg-[#003629] text-white text-xs sm:text-sm font-bold rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm cursor-pointer"
+                    className="w-full py-3.5 px-4 bg-[#14456F] hover:bg-[#0B2A4A] text-white text-xs sm:text-sm font-bold rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm cursor-pointer"
                   >
                     <Send className="w-4 h-4" />
                     <span>Transmettre le bordereau de liaison</span>
@@ -265,23 +265,23 @@ export const ContactSection: React.FC = () => {
           {/* Right Column (5 cols): Siège Opérationnel & Standard Direction */}
           <div className="lg:col-span-5 space-y-6">
             
-            <div className="bg-white rounded-2xl border border-[#e2e7ff] p-6 sm:p-8 shadow-xs space-y-6">
+            <div className="bg-white rounded-2xl border border-[#D9E2EC] p-6 sm:p-8 shadow-xs space-y-6">
               <div>
-                <span className="font-mono text-xs uppercase tracking-wider text-[#1b4d3e] font-bold">
+                <span className="font-mono text-xs uppercase tracking-wider text-[#C9A227] font-bold">
                   STANDARD INSTITUTIONNEL
                 </span>
-                <h3 className="font-display font-bold text-lg text-[#003629] mt-1">
+                <h3 className="font-display font-bold text-lg text-[#0B2A4A] mt-1">
                   Siège Opérationnel & Coordonnées
                 </h3>
               </div>
 
               <div className="space-y-4 text-xs sm:text-sm text-[#131b2e]">
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-[#f2f3ff] text-[#003629] flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="w-8 h-8 rounded-lg bg-[#EEF3F8] text-[#0B2A4A] flex items-center justify-center shrink-0 mt-0.5">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#003629]">Adresse Postale & Bureaux</h4>
+                    <h4 className="font-bold text-[#0B2A4A]">Adresse Postale & Bureaux</h4>
                     <p className="text-xs text-[#545f73] mt-0.5">
                       Avenue Pascal Zagré, Zone 2000, Ouagadougou, Burkina Faso
                     </p>
@@ -289,11 +289,11 @@ export const ContactSection: React.FC = () => {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-[#f2f3ff] text-[#003629] flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="w-8 h-8 rounded-lg bg-[#EEF3F8] text-[#0B2A4A] flex items-center justify-center shrink-0 mt-0.5">
                     <Clock className="w-4 h-4" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#003629]">Permanence Opérationnelle</h4>
+                    <h4 className="font-bold text-[#0B2A4A]">Permanence Opérationnelle</h4>
                     <p className="text-xs text-[#545f73] mt-0.5">
                       Lundi au Vendredi : 08h00 – 17h30 GMT
                     </p>
@@ -301,11 +301,11 @@ export const ContactSection: React.FC = () => {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-[#f2f3ff] text-[#003629] flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="w-8 h-8 rounded-lg bg-[#EEF3F8] text-[#0B2A4A] flex items-center justify-center shrink-0 mt-0.5">
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#003629]">Téléphone & WhatsApp</h4>
+                    <h4 className="font-bold text-[#0B2A4A]">Téléphone & WhatsApp</h4>
                     <p className="text-xs font-mono text-[#545f73] mt-0.5">
                       +226 25 30 00 00 / WhatsApp : +226 70 00 00 00
                     </p>
@@ -313,11 +313,11 @@ export const ContactSection: React.FC = () => {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-[#f2f3ff] text-[#003629] flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="w-8 h-8 rounded-lg bg-[#EEF3F8] text-[#0B2A4A] flex items-center justify-center shrink-0 mt-0.5">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#003629]">Courriels Officiels</h4>
+                    <h4 className="font-bold text-[#0B2A4A]">Courriels Officiels</h4>
                     <p className="text-xs font-mono text-[#545f73] mt-0.5">
                       contact@agenceos.bf · direction@agenceos.bf
                     </p>
@@ -326,7 +326,7 @@ export const ContactSection: React.FC = () => {
               </div>
 
               {/* Mentions Légales & Immatriculation */}
-              <div className="pt-4 border-t border-[#e2e7ff] text-xs text-[#545f73] space-y-1">
+              <div className="pt-4 border-t border-[#D9E2EC] text-xs text-[#545f73] space-y-1">
                 <p className="font-mono text-[11px]">
                   <strong>IFU :</strong> 00123456A · <strong>RCCM :</strong> BF-OUA-01-2024-B12-00432
                 </p>
@@ -337,10 +337,10 @@ export const ContactSection: React.FC = () => {
             </div>
 
             {/* Quick Quote Banner */}
-            <div className="bg-[#003629] text-white rounded-2xl p-6 shadow-sm">
+            <div className="bg-[#0B2A4A] text-white rounded-2xl p-6 shadow-sm">
               <div className="flex items-center gap-2 mb-2">
-                <FileText className="w-4 h-4 text-[#baeed9]" />
-                <span className="font-mono text-xs font-bold uppercase tracking-wider text-[#baeed9]">
+                <FileText className="w-4 h-4 text-[#C9DFF2]" />
+                <span className="font-mono text-xs font-bold uppercase tracking-wider text-[#C9DFF2]">
                   CONFIGURATEUR DE DEVIS
                 </span>
               </div>
@@ -352,7 +352,7 @@ export const ContactSection: React.FC = () => {
               </p>
               <button
                 onClick={() => setIsQuoteModalOpen(true)}
-                className="w-full py-2.5 px-4 bg-[#baeed9] hover:bg-[#9ed1bd] text-[#002117] text-xs font-bold rounded-lg transition-colors flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full py-2.5 px-4 bg-[#C9DFF2] hover:bg-[#A7C7E0] text-[#071A2E] text-xs font-bold rounded-lg transition-colors flex items-center justify-center gap-2 cursor-pointer"
               >
                 <span>Ouvrir le configurateur de devis</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -364,12 +364,12 @@ export const ContactSection: React.FC = () => {
         </div>
 
         {/* Section FAQ Institutionnelle (Stitch Mockup 4 style) */}
-        <div className="bg-white rounded-2xl border border-[#e2e7ff] p-6 sm:p-10 shadow-xs">
+        <div className="bg-white rounded-2xl border border-[#D9E2EC] p-6 sm:p-10 shadow-xs">
           <div className="max-w-2xl mb-8">
-            <span className="font-mono text-xs uppercase tracking-wider text-[#1b4d3e] font-bold">
+            <span className="font-mono text-xs uppercase tracking-wider text-[#C9A227] font-bold">
               QUESTIONS FRÉQUEMMENT POSÉES
             </span>
-            <h3 className="font-display font-bold text-2xl text-[#003629] mt-1">
+            <h3 className="font-display font-bold text-2xl text-[#0B2A4A] mt-1">
               Foire aux questions institutionnelle
             </h3>
             <p className="text-xs sm:text-sm text-[#545f73] mt-1">
@@ -383,19 +383,19 @@ export const ContactSection: React.FC = () => {
               return (
                 <div 
                   key={idx}
-                  className="rounded-xl border border-[#e2e7ff] overflow-hidden transition-colors"
+                  className="rounded-xl border border-[#D9E2EC] overflow-hidden transition-colors"
                 >
                   <button
                     onClick={() => setOpenFaq(isOpen ? null : idx)}
-                    className="w-full text-left p-4 sm:p-5 flex items-center justify-between gap-4 bg-[#faf8ff] hover:bg-[#f2f3ff] transition-colors cursor-pointer"
+                    className="w-full text-left p-4 sm:p-5 flex items-center justify-between gap-4 bg-[#F7F9FC] hover:bg-[#EEF3F8] transition-colors cursor-pointer"
                   >
-                    <span className="font-display font-bold text-sm sm:text-base text-[#003629]">
+                    <span className="font-display font-bold text-sm sm:text-base text-[#0B2A4A]">
                       {item.q}
                     </span>
-                    <ChevronDown className={`w-4 h-4 text-[#545f73] shrink-0 transition-transform ${isOpen ? 'rotate-180 text-[#003629]' : ''}`} />
+                    <ChevronDown className={`w-4 h-4 text-[#545f73] shrink-0 transition-transform ${isOpen ? 'rotate-180 text-[#0B2A4A]' : ''}`} />
                   </button>
                   {isOpen && (
-                    <div className="p-4 sm:p-5 bg-white border-t border-[#e2e7ff] text-xs sm:text-sm text-[#545f73] leading-relaxed">
+                    <div className="p-4 sm:p-5 bg-white border-t border-[#D9E2EC] text-xs sm:text-sm text-[#545f73] leading-relaxed">
                       {item.a}
                     </div>
                   )}

@@ -46,7 +46,7 @@ function AppContent() {
 
   // Public Views
   return (
-    <div className="min-h-screen flex flex-col bg-[#ffffff] font-sans selection:bg-[#baeed9] selection:text-[#002117]">
+    <div className="min-h-screen flex flex-col bg-[#ffffff] font-sans selection:bg-[#C9DFF2] selection:text-[#071A2E]">
       {/* Public Navigation Header */}
       <Header
         onOpenTracking={() => {
@@ -70,21 +70,21 @@ function AppContent() {
         )}
 
         {publicView === 'services' && (
-          <div className="pt-20">
+          <div className="pt-[92px]">
             <ServicesSection onOpenQuote={() => setIsQuoteModalOpen(true)} />
             <ContactSection />
           </div>
         )}
 
         {publicView === 'why_us' && (
-          <div className="pt-20">
+          <div className="pt-[92px]">
             <WhyUsSection />
             <ContactSection />
           </div>
         )}
 
         {publicView === 'contact' && (
-          <div className="pt-20">
+          <div className="pt-[92px]">
             <ContactSection />
           </div>
         )}

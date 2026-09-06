@@ -22,7 +22,7 @@ export const STATUT_STYLE: Record<StatutTache, string> = {
   en_cours: 'bg-blue-50 text-blue-700 border-blue-200',
   en_revue_directeur: 'bg-amber-50 text-amber-700 border-amber-200',
   validee: 'bg-emerald-50 text-emerald-700 border-emerald-200',
-  terminee: 'bg-[#baeed9] text-[#002117] border-[#9ed1bd]',
+  terminee: 'bg-[#C9DFF2] text-[#071A2E] border-[#A7C7E0]',
 };
 
 const PRIORITE_STYLE: Record<Tache['priorite'], string> = {
@@ -49,13 +49,13 @@ export const TacheCard: React.FC<{ tache: Tache; showDeliverAction?: boolean }> 
   };
 
   return (
-    <div className="rounded-xl border border-[#e2e7ff] bg-white p-5 shadow-xs">
+    <div className="rounded-xl border border-[#D9E2EC] bg-white p-5 shadow-xs">
       <div className="flex flex-wrap items-start justify-between gap-3 mb-2">
         <div>
-          <p className="text-[11px] font-mono text-[#1b4d3e] font-semibold uppercase tracking-wide mb-1">
+          <p className="text-[11px] font-mono text-[#C9A227] font-semibold uppercase tracking-wide mb-1">
             {tache.projetNom}
           </p>
-          <h4 className="font-bold text-sm text-[#003629]">{tache.titre}</h4>
+          <h4 className="font-bold text-sm text-[#0B2A4A]">{tache.titre}</h4>
         </div>
         <span className={`text-[11px] px-2.5 py-1 rounded-full border font-semibold ${STATUT_STYLE[tache.statut]}`}>
           {STATUT_LABEL[tache.statut]}
@@ -73,7 +73,7 @@ export const TacheCard: React.FC<{ tache: Tache; showDeliverAction?: boolean }> 
         </ul>
       )}
       {tache.commentaireDirecteur && (
-        <p className="text-[11px] text-[#1b4d3e] bg-[#f2f3ff] border border-[#e2e7ff] rounded-lg px-3 py-2 mb-3">
+        <p className="text-[11px] text-[#14456F] bg-[#EEF3F8] border border-[#D9E2EC] rounded-lg px-3 py-2 mb-3">
           <strong>Directeur :</strong> {tache.commentaireDirecteur}
         </p>
       )}
@@ -85,13 +85,13 @@ export const TacheCard: React.FC<{ tache: Tache; showDeliverAction?: boolean }> 
 
       {showDeliverAction && (tache.statut === 'a_faire' || tache.statut === 'en_cours') && (
         showForm ? (
-          <div className="space-y-2 border-t border-[#e2e7ff] pt-3">
+          <div className="space-y-2 border-t border-[#D9E2EC] pt-3">
             <input
               type="url"
               value={lien}
               onChange={(e) => setLien(e.target.value)}
               placeholder="Lien du livrable (GitHub, Figma, Drive...)"
-              className="w-full border border-[#c0c9c3] rounded-lg px-3 py-2 text-xs focus:outline-none focus:border-[#1b4d3e]"
+              className="w-full border border-[#C3CEDA] rounded-lg px-3 py-2 text-xs focus:outline-none focus:border-[#14456F]"
             />
             <input
               type="number"
@@ -99,12 +99,12 @@ export const TacheCard: React.FC<{ tache: Tache; showDeliverAction?: boolean }> 
               value={heures}
               onChange={(e) => setHeures(e.target.value)}
               placeholder="Temps passé (heures)"
-              className="w-full border border-[#c0c9c3] rounded-lg px-3 py-2 text-xs focus:outline-none focus:border-[#1b4d3e]"
+              className="w-full border border-[#C3CEDA] rounded-lg px-3 py-2 text-xs focus:outline-none focus:border-[#14456F]"
             />
             <div className="flex gap-2">
               <button
                 onClick={submitForReview}
-                className="inline-flex items-center gap-1.5 bg-[#1b4d3e] hover:bg-[#003629] text-white text-xs font-semibold px-3.5 py-2 rounded-lg cursor-pointer"
+                className="inline-flex items-center gap-1.5 bg-[#14456F] hover:bg-[#0B2A4A] text-white text-xs font-semibold px-3.5 py-2 rounded-lg cursor-pointer"
               >
                 <Send className="w-3.5 h-3.5" /> Soumettre au Directeur
               </button>
@@ -119,7 +119,7 @@ export const TacheCard: React.FC<{ tache: Tache; showDeliverAction?: boolean }> 
         ) : (
           <button
             onClick={() => setShowForm(true)}
-            className="inline-flex items-center gap-1.5 bg-[#f2f3ff] hover:bg-[#eaedff] border border-[#c0c9c3] text-[#003629] text-xs font-semibold px-3.5 py-2 rounded-lg cursor-pointer"
+            className="inline-flex items-center gap-1.5 bg-[#EEF3F8] hover:bg-[#E1EAF2] border border-[#C3CEDA] text-[#0B2A4A] text-xs font-semibold px-3.5 py-2 rounded-lg cursor-pointer"
           >
             <Send className="w-3.5 h-3.5" /> Soumettre un livrable
           </button>

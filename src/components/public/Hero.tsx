@@ -24,12 +24,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCandidateFlow }) => {
     <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden bg-[#ffffff]">
       
       {/* Subtle institutional grid watermark background */}
-      <div className="absolute inset-0 bg-[radial-gradient(#eaedff_1px,transparent_1px)] [background-size:24px_24px] opacity-60 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(#E1EAF2_1px,transparent_1px)] [background-size:24px_24px] opacity-60 pointer-events-none"></div>
 
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 relative z-10">
         
         {/* Institutional Pill Badge */}
-        <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#f2f3ff] border border-[#c0c9c3]/50 text-xs font-semibold text-[#003629] mb-8 shadow-xs">
+        <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#EEF3F8] border border-[#C3CEDA]/50 text-xs font-semibold text-[#0B2A4A] mb-8 shadow-xs">
           <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
           <span className="tracking-wide uppercase font-mono text-[11px]">
             Agence de Transformation Numérique · Ouagadougou, Burkina Faso
@@ -38,7 +38,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCandidateFlow }) => {
 
         {/* Main Headline */}
         <div className="max-w-4xl mb-8">
-          <h1 className="font-display font-bold text-3xl sm:text-5xl lg:text-5xl tracking-tight text-[#003629] leading-[1.15] mb-6">
+          <h1 className="font-display font-bold text-3xl sm:text-5xl lg:text-5xl tracking-tight text-[#0B2A4A] leading-[1.15] mb-6">
             Accompagner la souveraineté numérique et la modernisation des entreprises au Burkina Faso et en Afrique de l'Ouest.
           </h1>
           <p className="text-base sm:text-xl text-[#545f73] font-normal leading-relaxed max-w-3xl">
@@ -50,7 +50,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCandidateFlow }) => {
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-16">
           <button
             onClick={() => setIsQuoteModalOpen(true)}
-            className="inline-flex items-center justify-center gap-2.5 bg-[#1b4d3e] hover:bg-[#003629] text-white font-semibold text-sm sm:text-base px-6 py-3.5 rounded-lg transition-colors shadow-sm cursor-pointer"
+            className="inline-flex items-center justify-center gap-2.5 bg-[#14456F] hover:bg-[#0B2A4A] text-white font-semibold text-sm sm:text-base px-6 py-3.5 rounded-lg transition-colors shadow-sm cursor-pointer"
           >
             <span>Discuter d'un projet</span>
             <ArrowRight className="w-4 h-4" />
@@ -58,7 +58,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCandidateFlow }) => {
 
           <button
             onClick={onOpenCandidateFlow}
-            className="inline-flex items-center justify-center gap-2.5 bg-[#f2f3ff] hover:bg-[#eaedff] text-[#003629] border border-[#c0c9c3] font-semibold text-sm sm:text-base px-6 py-3.5 rounded-lg transition-colors cursor-pointer"
+            className="inline-flex items-center justify-center gap-2.5 bg-[#EEF3F8] hover:bg-[#E1EAF2] text-[#0B2A4A] border border-[#C3CEDA] font-semibold text-sm sm:text-base px-6 py-3.5 rounded-lg transition-colors cursor-pointer"
           >
             <span>Rejoindre l'équipe</span>
             <ChevronRight className="w-4 h-4 text-[#545f73]" />
@@ -66,13 +66,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCandidateFlow }) => {
         </div>
 
         {/* Visual Hero Banner / Architecture Representation */}
-        <div className="relative rounded-2xl bg-gradient-to-br from-[#003629] to-[#1b4d3e] text-white p-6 sm:p-10 shadow-lg border border-[#002117] overflow-hidden mb-16">
-          <div className="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-[#baeed9]/10 blur-2xl pointer-events-none"></div>
+        <div className="relative rounded-2xl bg-gradient-to-br from-[#0B2A4A] to-[#14456F] text-white p-6 sm:p-10 shadow-lg border border-[#071A2E] overflow-hidden mb-16">
+          <div className="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-[#C9DFF2]/10 blur-2xl pointer-events-none"></div>
           
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 relative z-10">
             <div className="max-w-2xl">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-white/10 text-white font-mono text-xs font-semibold uppercase tracking-wider mb-4 border border-white/15">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#baeed9]"></span>
+                <span className="w-1.5 h-1.5 rounded-full bg-[#C9DFF2]"></span>
                 <span>Pôle de développement régional • Ouagadougou · Zone 2000</span>
               </div>
               <h2 className="font-display text-2xl sm:text-3xl font-bold tracking-tight mb-3">
@@ -104,8 +104,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCandidateFlow }) => {
             <div className="w-full lg:w-auto shrink-0">
               <div className="bg-white text-[#131b2e] p-5 rounded-xl border border-white/20 shadow-md max-w-sm">
                 <div className="flex items-center gap-2 mb-3">
-                  <ShieldCheck className="w-5 h-5 text-[#1b4d3e]" />
-                  <span className="font-bold text-xs uppercase tracking-wider text-[#003629] font-mono">
+                  <ShieldCheck className="w-5 h-5 text-[#14456F]" />
+                  <span className="font-bold text-xs uppercase tracking-wider text-[#0B2A4A] font-mono">
                     Gouvernance AgenceOS
                   </span>
                 </div>
@@ -114,7 +114,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCandidateFlow }) => {
                 </p>
                 <button
                   onClick={() => setPublicView('services')}
-                  className="w-full py-2 px-3 bg-[#f2f3ff] hover:bg-[#eaedff] text-[#003629] text-xs font-bold rounded-lg transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                  className="w-full py-2 px-3 bg-[#EEF3F8] hover:bg-[#E1EAF2] text-[#0B2A4A] text-xs font-bold rounded-lg transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
                 >
                   <span>Explorer nos 4 pôles de service</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -127,8 +127,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCandidateFlow }) => {
         {/* 3 Metric blocks matching Stitch Mockup 1 */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
           
-          <div className="p-6 sm:p-8 rounded-xl bg-[#f2f3ff] border border-[#e2e7ff]">
-            <p className="font-display font-bold text-4xl text-[#003629] mb-2">
+          <div className="p-6 sm:p-8 rounded-xl bg-[#EEF3F8] border border-[#D9E2EC]">
+            <p className="font-display font-bold text-4xl text-[#0B2A4A] mb-2">
               +50
             </p>
             <h3 className="font-bold text-sm text-[#131b2e] uppercase tracking-wide font-mono mb-1">
@@ -139,8 +139,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCandidateFlow }) => {
             </p>
           </div>
 
-          <div className="p-6 sm:p-8 rounded-xl bg-[#f2f3ff] border border-[#e2e7ff]">
-            <p className="font-display font-bold text-4xl text-[#003629] mb-2">
+          <div className="p-6 sm:p-8 rounded-xl bg-[#EEF3F8] border border-[#D9E2EC]">
+            <p className="font-display font-bold text-4xl text-[#0B2A4A] mb-2">
               100%
             </p>
             <h3 className="font-bold text-sm text-[#131b2e] uppercase tracking-wide font-mono mb-1">
@@ -151,8 +151,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCandidateFlow }) => {
             </p>
           </div>
 
-          <div className="p-6 sm:p-8 rounded-xl bg-[#f2f3ff] border border-[#e2e7ff]">
-            <p className="font-display font-bold text-4xl text-[#003629] mb-2 font-mono">
+          <div className="p-6 sm:p-8 rounded-xl bg-[#EEF3F8] border border-[#D9E2EC]">
+            <p className="font-display font-bold text-4xl text-[#0B2A4A] mb-2 font-mono">
               UEMOA
             </p>
             <h3 className="font-bold text-sm text-[#131b2e] uppercase tracking-wide font-mono mb-1">
@@ -169,10 +169,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCandidateFlow }) => {
         <div className="mb-20">
           <div className="mb-10 text-center sm:text-left flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
-              <span className="font-mono text-xs uppercase tracking-wider text-[#1b4d3e] font-bold">
+              <span className="font-mono text-xs uppercase tracking-wider text-[#C9A227] font-bold">
                 PÔLES DE SERVICE OFFICIELS · STRUCTURE RIGOUROUSE
               </span>
-              <h2 className="font-display font-bold text-2xl sm:text-3xl text-[#003629] mt-2">
+              <h2 className="font-display font-bold text-2xl sm:text-3xl text-[#0B2A4A] mt-2">
                 4 domaines d'ingénierie clairement définis
               </h2>
               <p className="text-[#545f73] text-sm sm:text-base mt-2 max-w-2xl">
@@ -182,7 +182,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCandidateFlow }) => {
 
             <button
               onClick={() => setPublicView('services')}
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#003629] hover:underline cursor-pointer shrink-0"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0B2A4A] hover:underline cursor-pointer shrink-0"
             >
               <span>Voir le détail des 4 pôles</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -192,18 +192,18 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCandidateFlow }) => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             
             {/* Pôle 01 : Fondation et déploiement */}
-            <div className="p-6 sm:p-8 rounded-xl bg-[#ffffff] border-2 border-[#e2e7ff] hover:border-[#1b4d3e] transition-all flex flex-col justify-between">
+            <div className="p-6 sm:p-8 rounded-xl bg-[#ffffff] border-2 border-[#D9E2EC] hover:border-[#14456F] transition-all flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="font-mono text-xs font-bold text-[#1b4d3e] uppercase tracking-wider bg-[#f2f3ff] px-2.5 py-1 rounded">
+                  <span className="font-mono text-xs font-bold text-[#14456F] uppercase tracking-wider bg-[#EEF3F8] px-2.5 py-1 rounded">
                     Pôle 01
                   </span>
-                  <Layers className="w-5 h-5 text-[#1b4d3e]" />
+                  <Layers className="w-5 h-5 text-[#14456F]" />
                 </div>
-                <h3 className="font-display font-bold text-xl text-[#003629] mb-2">
+                <h3 className="font-display font-bold text-xl text-[#0B2A4A] mb-2">
                   Fondation et Déploiement
                 </h3>
-                <p className="text-xs sm:text-sm font-semibold text-[#1b4d3e] mb-2">
+                <p className="text-xs sm:text-sm font-semibold text-[#14456F] mb-2">
                   Mise en place complète de la présence numérique d'une entreprise qui démarre
                 </p>
                 <p className="text-sm text-[#545f73] leading-relaxed mb-4">
@@ -225,11 +225,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCandidateFlow }) => {
                 </ul>
               </div>
 
-              <div className="pt-5 mt-4 border-t border-[#e2e7ff] flex items-center justify-between">
+              <div className="pt-5 mt-4 border-t border-[#D9E2EC] flex items-center justify-between">
                 <span className="text-xs font-mono text-[#545f73]">Entreprises en création & PME</span>
                 <button
                   onClick={() => setIsQuoteModalOpen(true)}
-                  className="text-xs font-bold text-[#003629] hover:underline flex items-center gap-1 cursor-pointer"
+                  className="text-xs font-bold text-[#0B2A4A] hover:underline flex items-center gap-1 cursor-pointer"
                 >
                   <span>Chiffrer ce pôle</span>
                   <ArrowRight className="w-3 h-3" />
@@ -238,18 +238,18 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCandidateFlow }) => {
             </div>
 
             {/* Pôle 02 : Accompagnement et boutique digitale */}
-            <div className="p-6 sm:p-8 rounded-xl bg-[#ffffff] border-2 border-[#e2e7ff] hover:border-[#1b4d3e] transition-all flex flex-col justify-between">
+            <div className="p-6 sm:p-8 rounded-xl bg-[#ffffff] border-2 border-[#D9E2EC] hover:border-[#14456F] transition-all flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="font-mono text-xs font-bold text-[#1b4d3e] uppercase tracking-wider bg-[#f2f3ff] px-2.5 py-1 rounded">
+                  <span className="font-mono text-xs font-bold text-[#14456F] uppercase tracking-wider bg-[#EEF3F8] px-2.5 py-1 rounded">
                     Pôle 02
                   </span>
-                  <Smartphone className="w-5 h-5 text-[#1b4d3e]" />
+                  <Smartphone className="w-5 h-5 text-[#14456F]" />
                 </div>
-                <h3 className="font-display font-bold text-xl text-[#003629] mb-2">
+                <h3 className="font-display font-bold text-xl text-[#0B2A4A] mb-2">
                   Accompagnement et Boutique Digitale
                 </h3>
-                <p className="text-xs sm:text-sm font-semibold text-[#1b4d3e] mb-2">
+                <p className="text-xs sm:text-sm font-semibold text-[#14456F] mb-2">
                   Suivi continu & solutions e-commerce pour accélérer et vendre
                 </p>
                 <p className="text-sm text-[#545f73] leading-relaxed mb-4">
@@ -271,11 +271,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCandidateFlow }) => {
                 </ul>
               </div>
 
-              <div className="pt-5 mt-4 border-t border-[#e2e7ff] flex items-center justify-between">
+              <div className="pt-5 mt-4 border-t border-[#D9E2EC] flex items-center justify-between">
                 <span className="text-xs font-mono text-[#545f73]">Commerces & Marques locales</span>
                 <button
                   onClick={() => setIsQuoteModalOpen(true)}
-                  className="text-xs font-bold text-[#003629] hover:underline flex items-center gap-1 cursor-pointer"
+                  className="text-xs font-bold text-[#0B2A4A] hover:underline flex items-center gap-1 cursor-pointer"
                 >
                   <span>Chiffrer ce pôle</span>
                   <ArrowRight className="w-3 h-3" />
@@ -284,18 +284,18 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCandidateFlow }) => {
             </div>
 
             {/* Pôle 03 : Développement web & mobile sur mesure */}
-            <div className="p-6 sm:p-8 rounded-xl bg-[#ffffff] border-2 border-[#e2e7ff] hover:border-[#1b4d3e] transition-all flex flex-col justify-between">
+            <div className="p-6 sm:p-8 rounded-xl bg-[#ffffff] border-2 border-[#D9E2EC] hover:border-[#14456F] transition-all flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="font-mono text-xs font-bold text-[#1b4d3e] uppercase tracking-wider bg-[#f2f3ff] px-2.5 py-1 rounded">
+                  <span className="font-mono text-xs font-bold text-[#14456F] uppercase tracking-wider bg-[#EEF3F8] px-2.5 py-1 rounded">
                     Pôle 03
                   </span>
-                  <Globe2 className="w-5 h-5 text-[#1b4d3e]" />
+                  <Globe2 className="w-5 h-5 text-[#14456F]" />
                 </div>
-                <h3 className="font-display font-bold text-xl text-[#003629] mb-2">
+                <h3 className="font-display font-bold text-xl text-[#0B2A4A] mb-2">
                   Développement Web & Mobile sur Mesure
                 </h3>
-                <p className="text-xs sm:text-sm font-semibold text-[#1b4d3e] mb-2">
+                <p className="text-xs sm:text-sm font-semibold text-[#14456F] mb-2">
                   Solutions logicielles avancées taillées pour vos processus métiers spécifiques
                 </p>
                 <p className="text-sm text-[#545f73] leading-relaxed mb-4">
@@ -317,11 +317,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCandidateFlow }) => {
                 </ul>
               </div>
 
-              <div className="pt-5 mt-4 border-t border-[#e2e7ff] flex items-center justify-between">
+              <div className="pt-5 mt-4 border-t border-[#D9E2EC] flex items-center justify-between">
                 <span className="text-xs font-mono text-[#545f73]">Startups, ONG, Entreprises matures</span>
                 <button
                   onClick={() => setIsQuoteModalOpen(true)}
-                  className="text-xs font-bold text-[#003629] hover:underline flex items-center gap-1 cursor-pointer"
+                  className="text-xs font-bold text-[#0B2A4A] hover:underline flex items-center gap-1 cursor-pointer"
                 >
                   <span>Chiffrer ce pôle</span>
                   <ArrowRight className="w-3 h-3" />
@@ -330,18 +330,18 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCandidateFlow }) => {
             </div>
 
             {/* Pôle 04 : Identité digitale & gestion de réseaux sociaux */}
-            <div className="p-6 sm:p-8 rounded-xl bg-[#ffffff] border-2 border-[#e2e7ff] hover:border-[#1b4d3e] transition-all flex flex-col justify-between">
+            <div className="p-6 sm:p-8 rounded-xl bg-[#ffffff] border-2 border-[#D9E2EC] hover:border-[#14456F] transition-all flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="font-mono text-xs font-bold text-[#1b4d3e] uppercase tracking-wider bg-[#f2f3ff] px-2.5 py-1 rounded">
+                  <span className="font-mono text-xs font-bold text-[#14456F] uppercase tracking-wider bg-[#EEF3F8] px-2.5 py-1 rounded">
                     Pôle 04
                   </span>
-                  <Share2 className="w-5 h-5 text-[#1b4d3e]" />
+                  <Share2 className="w-5 h-5 text-[#14456F]" />
                 </div>
-                <h3 className="font-display font-bold text-xl text-[#003629] mb-2">
+                <h3 className="font-display font-bold text-xl text-[#0B2A4A] mb-2">
                   Identité Digitale & Gestion de Réseaux Sociaux
                 </h3>
-                <p className="text-xs sm:text-sm font-semibold text-[#1b4d3e] mb-2">
+                <p className="text-xs sm:text-sm font-semibold text-[#14456F] mb-2">
                   Branding fort & animation de communautés pour transformer vos abonnés en clients
                 </p>
                 <p className="text-sm text-[#545f73] leading-relaxed mb-4">
@@ -363,11 +363,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCandidateFlow }) => {
                 </ul>
               </div>
 
-              <div className="pt-5 mt-4 border-t border-[#e2e7ff] flex items-center justify-between">
+              <div className="pt-5 mt-4 border-t border-[#D9E2EC] flex items-center justify-between">
                 <span className="text-xs font-mono text-[#545f73]">Toutes organisations & Leaders</span>
                 <button
                   onClick={() => setIsQuoteModalOpen(true)}
-                  className="text-xs font-bold text-[#003629] hover:underline flex items-center gap-1 cursor-pointer"
+                  className="text-xs font-bold text-[#0B2A4A] hover:underline flex items-center gap-1 cursor-pointer"
                 >
                   <span>Chiffrer ce pôle</span>
                   <ArrowRight className="w-3 h-3" />
@@ -379,12 +379,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCandidateFlow }) => {
         </div>
 
         {/* Section Équipe & Métiers représentés */}
-        <div id="metiers" className="mb-20 pt-10 border-t border-[#e2e7ff]">
+        <div id="metiers" className="mb-20 pt-10 border-t border-[#D9E2EC]">
           <div className="max-w-3xl mb-12">
-            <span className="font-mono text-xs uppercase tracking-wider text-[#1b4d3e] font-bold">
+            <span className="font-mono text-xs uppercase tracking-wider text-[#C9A227] font-bold">
               PÔLE INGÉNIERIE & MÉTIERS
             </span>
-            <h2 className="font-display font-bold text-2xl sm:text-3xl text-[#003629] mt-2">
+            <h2 className="font-display font-bold text-2xl sm:text-3xl text-[#0B2A4A] mt-2">
               Une équipe d'experts burkinabè aux compétences complémentaires
             </h2>
             <p className="text-[#545f73] text-sm sm:text-base mt-2">
@@ -395,65 +395,65 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCandidateFlow }) => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
             {/* Metier 1: Développeur Front-end */}
-            <div className="p-6 rounded-xl bg-[#f2f3ff] border border-[#e2e7ff]">
-              <div className="w-10 h-10 rounded-lg bg-[#ffffff] text-[#003629] border border-[#c0c9c3]/50 flex items-center justify-center mb-4">
+            <div className="p-6 rounded-xl bg-[#EEF3F8] border border-[#D9E2EC]">
+              <div className="w-10 h-10 rounded-lg bg-[#ffffff] text-[#0B2A4A] border border-[#C3CEDA]/50 flex items-center justify-center mb-4">
                 <Globe2 className="w-5 h-5" />
               </div>
-              <h3 className="font-display font-bold text-base text-[#003629] mb-1">
+              <h3 className="font-display font-bold text-base text-[#0B2A4A] mb-1">
                 Développeurs Front-end
               </h3>
               <p className="text-xs text-[#545f73] leading-relaxed mb-3">
                 Spécialistes React, Next.js et Tailwind CSS garantissant des interfaces rapides, fluides et optimisées pour le mobile.
               </p>
-              <div className="text-[11px] font-mono text-[#1b4d3e] font-semibold">
+              <div className="text-[11px] font-mono text-[#C9A227] font-semibold">
                 React · TS · Tailwind · Offline
               </div>
             </div>
 
             {/* Metier 2: Community Manager */}
-            <div className="p-6 rounded-xl bg-[#f2f3ff] border border-[#e2e7ff]">
-              <div className="w-10 h-10 rounded-lg bg-[#ffffff] text-[#003629] border border-[#c0c9c3]/50 flex items-center justify-center mb-4">
+            <div className="p-6 rounded-xl bg-[#EEF3F8] border border-[#D9E2EC]">
+              <div className="w-10 h-10 rounded-lg bg-[#ffffff] text-[#0B2A4A] border border-[#C3CEDA]/50 flex items-center justify-center mb-4">
                 <Share2 className="w-5 h-5" />
               </div>
-              <h3 className="font-display font-bold text-base text-[#003629] mb-1">
+              <h3 className="font-display font-bold text-base text-[#0B2A4A] mb-1">
                 Community Managers
               </h3>
               <p className="text-xs text-[#545f73] leading-relaxed mb-3">
                 Pilotes de l'e-réputation, du storytelling local et de la conversion sur les réseaux sociaux (Meta, TikTok, LinkedIn).
               </p>
-              <div className="text-[11px] font-mono text-[#1b4d3e] font-semibold">
+              <div className="text-[11px] font-mono text-[#C9A227] font-semibold">
                 Social Ads · Copywriting · Modération
               </div>
             </div>
 
             {/* Metier 3: Vidéaste */}
-            <div className="p-6 rounded-xl bg-[#f2f3ff] border border-[#e2e7ff]">
-              <div className="w-10 h-10 rounded-lg bg-[#ffffff] text-[#003629] border border-[#c0c9c3]/50 flex items-center justify-center mb-4">
+            <div className="p-6 rounded-xl bg-[#EEF3F8] border border-[#D9E2EC]">
+              <div className="w-10 h-10 rounded-lg bg-[#ffffff] text-[#0B2A4A] border border-[#C3CEDA]/50 flex items-center justify-center mb-4">
                 <Smartphone className="w-5 h-5" />
               </div>
-              <h3 className="font-display font-bold text-base text-[#003629] mb-1">
+              <h3 className="font-display font-bold text-base text-[#0B2A4A] mb-1">
                 Vidéastes & Monteurs
               </h3>
               <p className="text-xs text-[#545f73] leading-relaxed mb-3">
                 Captation et post-production de formats courts (Reels, TikTok) et spots publicitaires percutants au sound design soigné.
               </p>
-              <div className="text-[11px] font-mono text-[#1b4d3e] font-semibold">
+              <div className="text-[11px] font-mono text-[#C9A227] font-semibold">
                 Formats 9:16 · Montage 4K · Sound FX
               </div>
             </div>
 
             {/* Metier 4: Graphiste */}
-            <div className="p-6 rounded-xl bg-[#f2f3ff] border border-[#e2e7ff]">
-              <div className="w-10 h-10 rounded-lg bg-[#ffffff] text-[#003629] border border-[#c0c9c3]/50 flex items-center justify-center mb-4">
+            <div className="p-6 rounded-xl bg-[#EEF3F8] border border-[#D9E2EC]">
+              <div className="w-10 h-10 rounded-lg bg-[#ffffff] text-[#0B2A4A] border border-[#C3CEDA]/50 flex items-center justify-center mb-4">
                 <Layers className="w-5 h-5" />
               </div>
-              <h3 className="font-display font-bold text-base text-[#003629] mb-1">
+              <h3 className="font-display font-bold text-base text-[#0B2A4A] mb-1">
                 Graphistes & Designers
               </h3>
               <p className="text-xs text-[#545f73] leading-relaxed mb-3">
                 Architectes visuels concevant des chartes graphiques mémorables, des identités fortes et des assets print & digital.
               </p>
-              <div className="text-[11px] font-mono text-[#1b4d3e] font-semibold">
+              <div className="text-[11px] font-mono text-[#C9A227] font-semibold">
                 Illustrator · Figma · Identité visuelle
               </div>
             </div>
@@ -461,13 +461,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCandidateFlow }) => {
           </div>
 
           {/* Institutional Quality Charter */}
-          <div className="mt-8 p-6 rounded-xl bg-[#ffffff] border border-[#1b4d3e]/20 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div className="mt-8 p-6 rounded-xl bg-[#ffffff] border border-[#14456F]/20 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-[#baeed9] text-[#003629] flex items-center justify-center shrink-0">
+              <div className="w-10 h-10 rounded-full bg-[#C9DFF2] text-[#0B2A4A] flex items-center justify-center shrink-0">
                 <ShieldCheck className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="font-bold text-sm text-[#003629]">
+                <h4 className="font-bold text-sm text-[#0B2A4A]">
                   Supervision Technique & Gouvernance Déontologique
                 </h4>
                 <p className="text-xs text-[#545f73]">
@@ -478,7 +478,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCandidateFlow }) => {
 
             <button
               onClick={onOpenCandidateFlow}
-              className="shrink-0 px-4 py-2 bg-[#f2f3ff] hover:bg-[#eaedff] text-[#003629] text-xs font-bold rounded-lg border border-[#c0c9c3] transition-colors cursor-pointer"
+              className="shrink-0 px-4 py-2 bg-[#EEF3F8] hover:bg-[#E1EAF2] text-[#0B2A4A] text-xs font-bold rounded-lg border border-[#C3CEDA] transition-colors cursor-pointer"
             >
               Postuler à l'équipe
             </button>

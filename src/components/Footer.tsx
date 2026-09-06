@@ -33,12 +33,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTrackingWithCode, onOpenDi
   };
 
   return (
-    <footer className="bg-[#002117] text-[#e2e7ff] border-t border-[#003629] font-sans">
+    <footer className="bg-[#071A2E] text-[#D9E2EC] border-t border-[#0B2A4A] font-sans">
       {/* Top CTA Banner */}
-      <div className="border-b border-white/10 bg-[#003629] py-10 px-4 sm:px-6 lg:px-8">
+      <div className="border-b border-white/10 bg-[#0B2A4A] py-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-[1280px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#baeed9]/15 text-[#baeed9] border border-[#baeed9]/30 mb-2 uppercase tracking-wider">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#C9DFF2]/15 text-[#C9DFF2] border border-[#C9DFF2]/30 mb-2 uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5" />
               DIGITALISATION & INGÉNIERIE BURKINA FASO
             </span>
@@ -52,7 +52,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTrackingWithCode, onOpenDi
           <div className="flex flex-wrap items-center gap-3 w-full md:w-auto shrink-0">
             <button
               onClick={() => setIsQuoteModalOpen(true)}
-              className="px-5 py-2.5 rounded-lg bg-[#baeed9] hover:bg-[#9ed1bd] text-[#002117] text-xs sm:text-sm font-bold shadow-sm transition-colors text-center cursor-pointer"
+              className="px-5 py-2.5 rounded-lg bg-[#C9DFF2] hover:bg-[#A7C7E0] text-[#071A2E] text-xs sm:text-sm font-bold shadow-sm transition-colors text-center cursor-pointer"
             >
               Demander un devis
             </button>
@@ -64,7 +64,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTrackingWithCode, onOpenDi
               }}
               className="px-5 py-2.5 rounded-lg bg-white/10 hover:bg-white/15 text-white border border-white/20 text-xs sm:text-sm font-semibold transition-colors text-center flex items-center justify-center gap-1.5 cursor-pointer"
             >
-              <UserPlus className="w-4 h-4 text-[#baeed9]" />
+              <UserPlus className="w-4 h-4 text-[#C9DFF2]" />
               <span>Rejoindre l'équipe</span>
             </button>
           </div>
@@ -78,13 +78,13 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTrackingWithCode, onOpenDi
           {/* Col 1: Identity & Coordonnées (4 cols) */}
           <div className="lg:col-span-4 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-[#baeed9] text-[#002117] font-extrabold flex items-center justify-center text-sm font-display">
+              <div className="w-10 h-10 rounded-lg bg-[#C9DFF2] text-[#071A2E] font-extrabold flex items-center justify-center text-sm font-display">
                 AOS
               </div>
               <div>
                 <div className="flex items-center gap-2">
                   <span className="font-extrabold text-lg text-white font-display">AgenceOS</span>
-                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-white/10 text-[#baeed9] border border-white/10">
+                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-white/10 text-[#C9DFF2] border border-white/10">
                     Burkina Faso
                   </span>
                 </div>
@@ -98,16 +98,16 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTrackingWithCode, onOpenDi
 
             <div className="pt-2 space-y-2 text-xs text-white/80">
               <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-[#baeed9] shrink-0" />
+                <MapPin className="w-4 h-4 text-[#C9DFF2] shrink-0" />
                 <span>Avenue Pascal Zagré, Zone 2000, Ouagadougou, BF</span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-[#baeed9] shrink-0" />
+                <Phone className="w-4 h-4 text-[#C9DFF2] shrink-0" />
                 <span className="font-mono font-bold text-white">+226 55 30 08 68</span>
-                <span className="text-[10px] text-[#baeed9]/70 font-mono">(Ligne officielle)</span>
+                <span className="text-[10px] text-[#C9DFF2]/70 font-mono">(Ligne officielle)</span>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-[#baeed9] shrink-0" />
+                <Mail className="w-4 h-4 text-[#C9DFF2] shrink-0" />
                 <span className="font-mono">contact@agenceos.bf</span>
               </div>
             </div>
@@ -131,9 +131,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTrackingWithCode, onOpenDi
                       setPublicView('services'); 
                       window.scrollTo({ top: 0, behavior: 'smooth' });
                     }}
-                    className="hover:text-[#baeed9] transition-colors flex items-start gap-1.5 cursor-pointer text-left group"
+                    className="hover:text-[#C9DFF2] transition-colors flex items-start gap-1.5 cursor-pointer text-left group"
                   >
-                    <ChevronRight className="w-3.5 h-3.5 text-[#baeed9] shrink-0 mt-0.5 group-hover:translate-x-0.5 transition-transform" />
+                    <ChevronRight className="w-3.5 h-3.5 text-[#C9DFF2] shrink-0 mt-0.5 group-hover:translate-x-0.5 transition-transform" />
                     <span>{pole.titre}</span>
                   </button>
                 </li>
@@ -147,7 +147,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTrackingWithCode, onOpenDi
                   setPublicView('services');
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="text-[11px] text-[#baeed9] font-bold hover:underline inline-flex items-center gap-1 cursor-pointer"
+                className="text-[11px] text-[#C9DFF2] font-bold hover:underline inline-flex items-center gap-1 cursor-pointer"
               >
                 <span>Découvrir les livrables par pôle</span>
                 <ChevronRight className="w-3 h-3" />
@@ -176,7 +176,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTrackingWithCode, onOpenDi
                 setPublicView('candidate_flow');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
-              className="inline-flex items-center gap-1 text-xs font-bold text-[#baeed9] hover:underline pt-1 cursor-pointer"
+              className="inline-flex items-center gap-1 text-xs font-bold text-[#C9DFF2] hover:underline pt-1 cursor-pointer"
             >
               <span>Accéder au test (4 étapes)</span>
               <ChevronRight className="w-3 h-3" />
@@ -200,11 +200,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTrackingWithCode, onOpenDi
                   placeholder="Ex: AOS-DEV-9120"
                   value={quickSearchCode}
                   onChange={(e) => setQuickSearchCode(e.target.value)}
-                  className="w-full bg-white/10 border border-white/20 rounded-lg px-3 py-1.5 text-xs text-white placeholder:text-white/40 focus:outline-none focus:border-[#baeed9] font-mono"
+                  className="w-full bg-white/10 border border-white/20 rounded-lg px-3 py-1.5 text-xs text-white placeholder:text-white/40 focus:outline-none focus:border-[#C9DFF2] font-mono"
                 />
                 <button
                   type="submit"
-                  className="p-2 rounded-lg bg-[#baeed9] hover:bg-[#9ed1bd] text-[#002117] font-bold transition-colors cursor-pointer shrink-0"
+                  className="p-2 rounded-lg bg-[#C9DFF2] hover:bg-[#A7C7E0] text-[#071A2E] font-bold transition-colors cursor-pointer shrink-0"
                   title="Consulter mon dossier"
                 >
                   <Search className="w-3.5 h-3.5" />
@@ -221,10 +221,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTrackingWithCode, onOpenDi
                     setIsCollabSpaceOpen(true);
                   }
                 }}
-                className="w-full flex items-center justify-between text-xs text-white/80 hover:text-[#baeed9] transition-colors cursor-pointer py-1"
+                className="w-full flex items-center justify-between text-xs text-white/80 hover:text-[#C9DFF2] transition-colors cursor-pointer py-1"
               >
                 <span className="flex items-center gap-2">
-                  <UserPlus className="w-3.5 h-3.5 text-[#baeed9]" />
+                  <UserPlus className="w-3.5 h-3.5 text-[#C9DFF2]" />
                   <span>Espace Collaborateur</span>
                 </span>
                 <ChevronRight className="w-3.5 h-3.5 text-white/40" />
@@ -236,10 +236,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTrackingWithCode, onOpenDi
                   setPublicView('support');
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="w-full flex items-center justify-between text-xs text-white/80 hover:text-[#baeed9] transition-colors cursor-pointer py-1"
+                className="w-full flex items-center justify-between text-xs text-white/80 hover:text-[#C9DFF2] transition-colors cursor-pointer py-1"
               >
                 <span className="flex items-center gap-2">
-                  <LifeBuoy className="w-3.5 h-3.5 text-[#baeed9]" />
+                  <LifeBuoy className="w-3.5 h-3.5 text-[#C9DFF2]" />
                   <span>Support & Assistance Client</span>
                 </span>
                 <ChevronRight className="w-3.5 h-3.5 text-white/40" />
@@ -251,7 +251,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTrackingWithCode, onOpenDi
                   setPublicView('privacy');
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="w-full flex items-center justify-between text-xs text-white/80 hover:text-[#baeed9] transition-colors cursor-pointer py-1"
+                className="w-full flex items-center justify-between text-xs text-white/80 hover:text-[#C9DFF2] transition-colors cursor-pointer py-1"
               >
                 <span>Politique de confidentialité & CIL</span>
                 <ChevronRight className="w-3.5 h-3.5 text-white/40" />
@@ -266,7 +266,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTrackingWithCode, onOpenDi
           <p>© {new Date().getFullYear()} AgenceOS Burkina Faso · Tous droits réservés.</p>
           
           <div className="flex flex-wrap items-center gap-4 text-[11px]">
-            <span className="flex items-center gap-1 text-[#baeed9]">
+            <span className="flex items-center gap-1 text-[#C9DFF2]">
               <FileCheck className="w-3.5 h-3.5" />
               Conformité CIL (Loi N°001-2021/AN)
             </span>

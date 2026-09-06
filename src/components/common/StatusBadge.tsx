@@ -16,8 +16,8 @@ export const StatusBadge: React.FC<StatusBadgeProps> = ({ statut, type = 'candid
         id={`badge-collab-${statut}`}
         className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold tracking-wide font-mono ${
           isActif
-            ? 'bg-[#baeed9] text-[#002117] border border-emerald-300'
-            : 'bg-[#f2f3ff] text-[#545f73] border border-[#c0c9c3]'
+            ? 'bg-[#C9DFF2] text-[#071A2E] border border-emerald-300'
+            : 'bg-[#EEF3F8] text-[#545f73] border border-[#C3CEDA]'
         } ${className}`}
       >
         <span className={`w-1.5 h-1.5 rounded-full ${isActif ? 'bg-emerald-600' : 'bg-slate-400'}`} />
@@ -30,8 +30,8 @@ export const StatusBadge: React.FC<StatusBadgeProps> = ({ statut, type = 'candid
     switch (statut) {
       case 'nouveau':
         return (
-          <span id="badge-devis-nouveau" className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-[#eaedff] text-[#003629] border border-[#1b4d3e]/30 font-mono ${className}`}>
-            <Clock className="w-3.5 h-3.5 text-[#1b4d3e]" />
+          <span id="badge-devis-nouveau" className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-[#E1EAF2] text-[#0B2A4A] border border-[#14456F]/30 font-mono ${className}`}>
+            <Clock className="w-3.5 h-3.5 text-[#14456F]" />
             Nouveau
           </span>
         );
@@ -72,7 +72,7 @@ export const StatusBadge: React.FC<StatusBadgeProps> = ({ statut, type = 'candid
   switch (statut) {
     case 'recue':
       return (
-        <span id="badge-cand-recue" className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#f2f3ff] text-[#545f73] border border-[#c0c9c3] font-mono ${className}`}>
+        <span id="badge-cand-recue" className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#EEF3F8] text-[#545f73] border border-[#C3CEDA] font-mono ${className}`}>
           <Clock className="w-3.5 h-3.5 text-[#707974]" />
           Reçue
         </span>
@@ -93,7 +93,7 @@ export const StatusBadge: React.FC<StatusBadgeProps> = ({ statut, type = 'candid
       );
     case 'validee':
       return (
-        <span id="badge-cand-validee" className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#baeed9] text-[#002117] border border-emerald-300 font-mono ${className}`}>
+        <span id="badge-cand-validee" className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#C9DFF2] text-[#071A2E] border border-emerald-300 font-mono ${className}`}>
           <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700" />
           Validée (Collaborateur)
         </span>

@@ -39,7 +39,7 @@ export const QuotesTab: React.FC = () => {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h2 className="text-xl font-bold text-[#003629] font-display">
+          <h2 className="text-xl font-bold text-[#0B2A4A] font-display">
             Devis Reçus & Portefeuille Prospects
           </h2>
           <p className="text-xs sm:text-sm text-[#545f73] mt-0.5">
@@ -48,17 +48,17 @@ export const QuotesTab: React.FC = () => {
         </div>
 
         <div className="flex items-center gap-2 text-xs font-mono">
-          <span className="px-3 py-1.5 rounded-lg bg-white border border-[#c0c9c3] text-[#131b2e] font-bold">
+          <span className="px-3 py-1.5 rounded-lg bg-white border border-[#C3CEDA] text-[#131b2e] font-bold">
             Total : {devisList.length}
           </span>
-          <span className="px-3 py-1.5 rounded-lg bg-[#eaedff] border border-[#1b4d3e]/20 text-[#003629] font-bold">
+          <span className="px-3 py-1.5 rounded-lg bg-[#E1EAF2] border border-[#14456F]/20 text-[#0B2A4A] font-bold">
             Nouveaux : {devisList.filter(d => d.statut === 'nouveau').length}
           </span>
         </div>
       </div>
 
       {/* Filter Bar */}
-      <div className="bg-white p-4 sm:p-5 rounded-2xl border border-[#e2e7ff] shadow-xs grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <div className="bg-white p-4 sm:p-5 rounded-2xl border border-[#D9E2EC] shadow-xs grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div className="relative">
           <Search className="w-4 h-4 text-[#707974] absolute left-3.5 top-3" />
           <input
@@ -66,7 +66,7 @@ export const QuotesTab: React.FC = () => {
             placeholder="Rechercher une entreprise, un client ou une ville..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-9 pr-3.5 py-2.5 rounded-lg border border-[#c0c9c3] bg-[#faf8ff] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#1b4d3e] focus:bg-white"
+            className="w-full pl-9 pr-3.5 py-2.5 rounded-lg border border-[#C3CEDA] bg-[#F7F9FC] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#14456F] focus:bg-white"
           />
         </div>
 
@@ -74,7 +74,7 @@ export const QuotesTab: React.FC = () => {
           <select
             value={filterStatut}
             onChange={(e) => setFilterStatut(e.target.value)}
-            className="w-full px-3.5 py-2.5 rounded-lg border border-[#c0c9c3] bg-[#faf8ff] text-xs text-[#131b2e] focus:outline-none focus:border-[#1b4d3e] focus:bg-white"
+            className="w-full px-3.5 py-2.5 rounded-lg border border-[#C3CEDA] bg-[#F7F9FC] text-xs text-[#131b2e] focus:outline-none focus:border-[#14456F] focus:bg-white"
           >
             <option value="all">Tous les états de suivi</option>
             <option value="nouveau">Nouveaux (À contacter)</option>
@@ -96,7 +96,7 @@ export const QuotesTab: React.FC = () => {
             <div
               key={devis.id}
               className={`bg-white rounded-2xl border p-5 sm:p-6 shadow-xs transition-all flex flex-col justify-between ${
-                isNew ? 'border-2 border-[#1b4d3e]' : 'border-[#e2e7ff]'
+                isNew ? 'border-2 border-[#14456F]' : 'border-[#D9E2EC]'
               }`}
             >
               <div>
@@ -116,10 +116,10 @@ export const QuotesTab: React.FC = () => {
 
                 {/* Service & Budget pill */}
                 <div className="flex flex-wrap gap-2 mb-3 text-xs">
-                  <span className="bg-[#faf8ff] text-[#131b2e] border border-[#c0c9c3] px-2.5 py-1 rounded-lg font-medium">
+                  <span className="bg-[#F7F9FC] text-[#131b2e] border border-[#C3CEDA] px-2.5 py-1 rounded-lg font-medium">
                     {devis.serviceDemande || (devis.servicesRequis && devis.servicesRequis[0]) || 'Transformation Digitale'}
                   </span>
-                  <span className="bg-[#eaedff] text-[#003629] border border-[#1b4d3e]/30 px-2.5 py-1 rounded-lg font-bold font-mono">
+                  <span className="bg-[#E1EAF2] text-[#0B2A4A] border border-[#14456F]/30 px-2.5 py-1 rounded-lg font-bold font-mono">
                     Budget : {devis.budgetEstime}
                   </span>
                   {devis.delaiSouhaite && (
@@ -130,12 +130,12 @@ export const QuotesTab: React.FC = () => {
                 </div>
 
                 {/* Description */}
-                <div className="bg-[#faf8ff] p-3 rounded-xl border border-[#e2e7ff] text-xs text-[#545f73] leading-relaxed mb-4 italic">
+                <div className="bg-[#F7F9FC] p-3 rounded-xl border border-[#D9E2EC] text-xs text-[#545f73] leading-relaxed mb-4 italic">
                   "{devis.descriptionProjet}"
                 </div>
 
                 {/* Contact info */}
-                <div className="space-y-1 text-xs text-[#545f73] mb-4 pt-2 border-t border-[#e2e7ff] font-mono">
+                <div className="space-y-1 text-xs text-[#545f73] mb-4 pt-2 border-t border-[#D9E2EC] font-mono">
                   <div className="flex items-center gap-2">
                     <Phone className="w-3.5 h-3.5 text-[#707974]" />
                     <span>{devis.telephone}</span>
@@ -148,14 +148,14 @@ export const QuotesTab: React.FC = () => {
               </div>
 
               {/* Action Bar */}
-              <div className="pt-3 border-t border-[#e2e7ff] flex flex-wrap items-center justify-between gap-2 text-xs">
+              <div className="pt-3 border-t border-[#D9E2EC] flex flex-wrap items-center justify-between gap-2 text-xs">
                 {/* Status selector */}
                 <div className="flex items-center gap-1.5">
                   <span className="text-[11px] text-[#707974] font-medium font-mono uppercase">Statut :</span>
                   <select
                     value={devis.statut}
                     onChange={(e) => updateDevisStatut(devis.id, e.target.value as StatutDevis)}
-                    className="px-2.5 py-1 rounded-lg border border-[#c0c9c3] text-xs bg-[#faf8ff] text-[#131b2e] font-bold focus:outline-none focus:border-[#1b4d3e] font-mono"
+                    className="px-2.5 py-1 rounded-lg border border-[#C3CEDA] text-xs bg-[#F7F9FC] text-[#131b2e] font-bold focus:outline-none focus:border-[#14456F] font-mono"
                   >
                     <option value="nouveau">Nouveau</option>
                     <option value="contacte">Contacté</option>
@@ -170,7 +170,7 @@ export const QuotesTab: React.FC = () => {
                     href={waUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="px-3 py-1.5 rounded-lg bg-[#1b4d3e] hover:bg-[#003629] text-white font-bold text-xs flex items-center gap-1.5 transition-colors shadow-xs"
+                    className="px-3 py-1.5 rounded-lg bg-[#14456F] hover:bg-[#0B2A4A] text-white font-bold text-xs flex items-center gap-1.5 transition-colors shadow-xs"
                   >
                     <MessageSquare className="w-3.5 h-3.5 text-white" />
                     <span>WhatsApp</span>
@@ -178,7 +178,7 @@ export const QuotesTab: React.FC = () => {
 
                   <a
                     href={`mailto:${devis.email}?subject=AgenceOS%20-%20Votre%20demande%20de%20devis`}
-                    className="px-3 py-1.5 rounded-lg bg-[#faf8ff] hover:bg-[#eaedff] text-[#003629] border border-[#c0c9c3] font-bold text-xs flex items-center gap-1.5 transition-colors"
+                    className="px-3 py-1.5 rounded-lg bg-[#F7F9FC] hover:bg-[#E1EAF2] text-[#0B2A4A] border border-[#C3CEDA] font-bold text-xs flex items-center gap-1.5 transition-colors"
                   >
                     <Mail className="w-3.5 h-3.5" />
                     <span>Email</span>

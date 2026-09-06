@@ -55,7 +55,7 @@ export const SettingsTab: React.FC = () => {
       
       {/* Header */}
       <div>
-        <h2 className="text-xl font-bold text-[#003629] font-display">
+        <h2 className="text-xl font-bold text-[#0B2A4A] font-display">
           Paramétrage & Gouvernance Agence
         </h2>
         <p className="text-xs sm:text-sm text-[#545f73] mt-0.5">
@@ -64,18 +64,18 @@ export const SettingsTab: React.FC = () => {
       </div>
 
       {resetSuccess && (
-        <div className="p-4 bg-[#baeed9] border border-emerald-300 rounded-xl text-xs font-bold text-[#002117] flex items-center gap-2 font-mono">
+        <div className="p-4 bg-[#C9DFF2] border border-emerald-300 rounded-xl text-xs font-bold text-[#071A2E] flex items-center gap-2 font-mono">
           <CheckCircle2 className="w-4 h-4 text-emerald-800" />
           <span>Données réinitialisées avec succès aux valeurs de démonstration officielles d'AgenceOS !</span>
         </div>
       )}
 
       {/* Recrutement par Métier */}
-      <div className="bg-white rounded-2xl border border-[#e2e7ff] p-6 shadow-xs space-y-5">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#e2e7ff] pb-4">
+      <div className="bg-white rounded-2xl border border-[#D9E2EC] p-6 shadow-xs space-y-5">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#D9E2EC] pb-4">
           <div>
-            <h3 className="text-base font-bold text-[#003629] flex items-center gap-2 font-display">
-              <Briefcase className="w-4 h-4 text-[#1b4d3e]" />
+            <h3 className="text-base font-bold text-[#0B2A4A] flex items-center gap-2 font-display">
+              <Briefcase className="w-4 h-4 text-[#14456F]" />
               <span>Pôles de Recrutement Actifs</span>
             </h3>
             <p className="text-xs text-[#545f73]">
@@ -85,17 +85,17 @@ export const SettingsTab: React.FC = () => {
 
           <button
             onClick={() => setIsAddingPoste(!isAddingPoste)}
-            className="px-3.5 py-1.5 rounded-lg bg-[#faf8ff] hover:bg-[#eaedff] text-[#003629] border border-[#c0c9c3] text-xs font-bold flex items-center gap-1.5 transition-colors self-start cursor-pointer font-mono"
+            className="px-3.5 py-1.5 rounded-lg bg-[#F7F9FC] hover:bg-[#E1EAF2] text-[#0B2A4A] border border-[#C3CEDA] text-xs font-bold flex items-center gap-1.5 transition-colors self-start cursor-pointer font-mono"
           >
-            <Plus className="w-3.5 h-3.5 text-[#003629]" />
+            <Plus className="w-3.5 h-3.5 text-[#0B2A4A]" />
             <span>{isAddingPoste ? 'Annuler' : 'Ajouter un métier'}</span>
           </button>
         </div>
 
         {/* Add Poste Form */}
         {isAddingPoste && (
-          <form onSubmit={handleAddPoste} className="p-4 bg-[#faf8ff] rounded-xl border border-[#e2e7ff] space-y-3">
-            <h4 className="text-xs font-bold text-[#003629] uppercase tracking-wider font-mono">
+          <form onSubmit={handleAddPoste} className="p-4 bg-[#F7F9FC] rounded-xl border border-[#D9E2EC] space-y-3">
+            <h4 className="text-xs font-bold text-[#0B2A4A] uppercase tracking-wider font-mono">
               Nouveau métier au recrutement
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -107,7 +107,7 @@ export const SettingsTab: React.FC = () => {
                   placeholder="Ex: Rédacteur SEO & Copywriter"
                   value={newPosteNom}
                   onChange={(e) => setNewPosteNom(e.target.value)}
-                  className="w-full px-3.5 py-2 rounded-lg border border-[#c0c9c3] text-xs bg-white text-[#131b2e] focus:outline-none focus:border-[#1b4d3e]"
+                  className="w-full px-3.5 py-2 rounded-lg border border-[#C3CEDA] text-xs bg-white text-[#131b2e] focus:outline-none focus:border-[#14456F]"
                 />
               </div>
 
@@ -118,7 +118,7 @@ export const SettingsTab: React.FC = () => {
                   placeholder="Ex: redacteur_seo"
                   value={newPosteCode}
                   onChange={(e) => setNewPosteCode(e.target.value)}
-                  className="w-full px-3.5 py-2 rounded-lg border border-[#c0c9c3] text-xs bg-white text-[#131b2e] focus:outline-none focus:border-[#1b4d3e] font-mono"
+                  className="w-full px-3.5 py-2 rounded-lg border border-[#C3CEDA] text-xs bg-white text-[#131b2e] focus:outline-none focus:border-[#14456F] font-mono"
                 />
               </div>
             </div>
@@ -131,7 +131,7 @@ export const SettingsTab: React.FC = () => {
                 placeholder="Ex: Rédaction de contenus persuasifs et optimisation du référencement web"
                 value={newPosteDesc}
                 onChange={(e) => setNewPosteDesc(e.target.value)}
-                className="w-full px-3.5 py-2 rounded-lg border border-[#c0c9c3] text-xs bg-white text-[#131b2e] focus:outline-none focus:border-[#1b4d3e]"
+                className="w-full px-3.5 py-2 rounded-lg border border-[#C3CEDA] text-xs bg-white text-[#131b2e] focus:outline-none focus:border-[#14456F]"
               />
             </div>
 
@@ -142,7 +142,7 @@ export const SettingsTab: React.FC = () => {
                 placeholder="Ex: SEO, Français irréprochable, Storytelling, WordPress"
                 value={newPosteSkills}
                 onChange={(e) => setNewPosteSkills(e.target.value)}
-                className="w-full px-3.5 py-2 rounded-lg border border-[#c0c9c3] text-xs bg-white text-[#131b2e] focus:outline-none focus:border-[#1b4d3e]"
+                className="w-full px-3.5 py-2 rounded-lg border border-[#C3CEDA] text-xs bg-white text-[#131b2e] focus:outline-none focus:border-[#14456F]"
               />
             </div>
 
@@ -156,7 +156,7 @@ export const SettingsTab: React.FC = () => {
               </button>
               <button
                 type="submit"
-                className="px-4 py-2 bg-[#1b4d3e] hover:bg-[#003629] text-white rounded-lg text-xs font-bold transition-colors cursor-pointer shadow-xs"
+                className="px-4 py-2 bg-[#14456F] hover:bg-[#0B2A4A] text-white rounded-lg text-xs font-bold transition-colors cursor-pointer shadow-xs"
               >
                 Créer et ouvrir au recrutement
               </button>
@@ -169,15 +169,15 @@ export const SettingsTab: React.FC = () => {
           {postes.map(poste => (
             <div
               key={poste.id}
-              className="p-4 rounded-xl border border-[#e2e7ff] bg-[#faf8ff] flex flex-col sm:flex-row sm:items-center justify-between gap-3"
+              className="p-4 rounded-xl border border-[#D9E2EC] bg-[#F7F9FC] flex flex-col sm:flex-row sm:items-center justify-between gap-3"
             >
               <div>
                 <div className="flex items-center gap-2 mb-1">
                   <h4 className="text-sm font-bold text-[#131b2e] font-display">{poste.nom}</h4>
                   <span className={`text-[10px] font-bold px-2.5 py-0.5 rounded-full font-mono ${
                     poste.ouvertRecrutement 
-                      ? 'bg-[#baeed9] text-[#002117] border border-emerald-300'
-                      : 'bg-[#f2f3ff] text-[#545f73] border border-[#c0c9c3]'
+                      ? 'bg-[#C9DFF2] text-[#071A2E] border border-emerald-300'
+                      : 'bg-[#EEF3F8] text-[#545f73] border border-[#C3CEDA]'
                   }`}>
                     {poste.ouvertRecrutement ? 'Recrutement actif' : 'Suspendu'}
                   </span>
@@ -193,7 +193,7 @@ export const SettingsTab: React.FC = () => {
                 className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-colors shrink-0 font-mono cursor-pointer ${
                   poste.ouvertRecrutement
                     ? 'bg-rose-50 text-rose-800 hover:bg-rose-100 border border-rose-200'
-                    : 'bg-[#1b4d3e] hover:bg-[#003629] text-white'
+                    : 'bg-[#14456F] hover:bg-[#0B2A4A] text-white'
                 }`}
               >
                 {poste.ouvertRecrutement ? 'Suspendre' : 'Ouvrir'}
@@ -204,25 +204,25 @@ export const SettingsTab: React.FC = () => {
       </div>
 
       {/* Agency Identity & Context Box */}
-      <div className="bg-white rounded-2xl border border-[#e2e7ff] p-6 shadow-xs space-y-4">
-        <h3 className="text-base font-bold text-[#003629] flex items-center gap-2 font-display">
-          <Building className="w-4 h-4 text-[#1b4d3e]" />
+      <div className="bg-white rounded-2xl border border-[#D9E2EC] p-6 shadow-xs space-y-4">
+        <h3 className="text-base font-bold text-[#0B2A4A] flex items-center gap-2 font-display">
+          <Building className="w-4 h-4 text-[#14456F]" />
           <span>AgenceOS · Présence Institutionnelle</span>
         </h3>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-[#545f73]">
-          <div className="p-3.5 bg-[#faf8ff] rounded-xl border border-[#e2e7ff]">
-            <span className="font-bold text-[#003629] block mb-1 font-mono">Bureaux Principaux</span>
+          <div className="p-3.5 bg-[#F7F9FC] rounded-xl border border-[#D9E2EC]">
+            <span className="font-bold text-[#0B2A4A] block mb-1 font-mono">Bureaux Principaux</span>
             <p className="text-[#131b2e]">Ouaga 2000, Ouagadougou</p>
             <p className="text-[#707974]">Burkina Faso (Afrique de l'Ouest)</p>
           </div>
-          <div className="p-3.5 bg-[#faf8ff] rounded-xl border border-[#e2e7ff]">
-            <span className="font-bold text-[#003629] block mb-1 font-mono">Pôles Territoriaux</span>
+          <div className="p-3.5 bg-[#F7F9FC] rounded-xl border border-[#D9E2EC]">
+            <span className="font-bold text-[#0B2A4A] block mb-1 font-mono">Pôles Territoriaux</span>
             <p className="text-[#131b2e]">Ouagadougou & Bobo-Dioulasso</p>
             <p className="text-[#707974]">Rayonnement UEMOA & Diaspora</p>
           </div>
-          <div className="p-3.5 bg-[#faf8ff] rounded-xl border border-[#e2e7ff]">
-            <span className="font-bold text-[#003629] block mb-1 font-mono">Canaux Financiers</span>
+          <div className="p-3.5 bg-[#F7F9FC] rounded-xl border border-[#D9E2EC]">
+            <span className="font-bold text-[#0B2A4A] block mb-1 font-mono">Canaux Financiers</span>
             <p className="text-[#131b2e]">Orange Money, Moov Money, Wave</p>
             <p className="text-[#707974]">Virements bancaires UEMOA</p>
           </div>
@@ -255,7 +255,7 @@ export const SettingsTab: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setIsResetConfirmOpen(false)}
-                className="px-4 py-1.5 bg-[#faf8ff] text-[#545f73] hover:text-[#131b2e] border border-[#c0c9c3] rounded-lg text-xs font-bold cursor-pointer"
+                className="px-4 py-1.5 bg-[#F7F9FC] text-[#545f73] hover:text-[#131b2e] border border-[#C3CEDA] rounded-lg text-xs font-bold cursor-pointer"
               >
                 Annuler
               </button>

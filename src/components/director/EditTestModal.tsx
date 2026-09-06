@@ -86,13 +86,13 @@ export const EditTestModal: React.FC<EditTestModalProps> = ({ test, isOpen, onCl
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs overflow-y-auto font-sans">
-      <div className="relative w-full max-w-2xl bg-white rounded-2xl shadow-xl border border-[#e2e7ff] overflow-hidden my-8 text-[#131b2e]">
+      <div className="relative w-full max-w-2xl bg-white rounded-2xl shadow-xl border border-[#D9E2EC] overflow-hidden my-8 text-[#131b2e]">
         
         {/* Header */}
-        <div className="bg-[#003629] text-white px-6 py-4 flex items-center justify-between">
+        <div className="bg-[#0B2A4A] text-white px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-[#baeed9] text-[#002117] flex items-center justify-center font-bold">
-              <FileText className="w-4 h-4 text-[#002117]" />
+            <div className="w-8 h-8 rounded-lg bg-[#C9DFF2] text-[#071A2E] flex items-center justify-center font-bold">
+              <FileText className="w-4 h-4 text-[#071A2E]" />
             </div>
             <div>
               <h3 className="text-base font-bold font-display text-white">
@@ -113,8 +113,8 @@ export const EditTestModal: React.FC<EditTestModalProps> = ({ test, isOpen, onCl
         <div className="p-6 sm:p-8">
           {submitted ? (
             <div className="py-8 text-center space-y-3">
-              <CheckCircle2 className="w-12 h-12 text-[#1b4d3e] mx-auto" />
-              <h4 className="text-base font-bold text-[#003629] font-display">Modèle d'épreuve enregistré !</h4>
+              <CheckCircle2 className="w-12 h-12 text-[#14456F] mx-auto" />
+              <h4 className="text-base font-bold text-[#0B2A4A] font-display">Modèle d'épreuve enregistré !</h4>
               <p className="text-xs text-[#545f73]">
                 Les prochaines candidatures sur ce profil recevront immédiatement ces consignes.
               </p>
@@ -129,7 +129,7 @@ export const EditTestModal: React.FC<EditTestModalProps> = ({ test, isOpen, onCl
                   <select
                     value={form.posteId}
                     onChange={(e) => setForm({ ...form, posteId: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-lg border border-[#c0c9c3] bg-[#faf8ff] text-xs text-[#131b2e] focus:outline-none focus:border-[#1b4d3e]"
+                    className="w-full px-3.5 py-2.5 rounded-lg border border-[#C3CEDA] bg-[#F7F9FC] text-xs text-[#131b2e] focus:outline-none focus:border-[#14456F]"
                   >
                     {postes.map(p => (
                       <option key={p.id} value={p.id}>{p.nom}</option>
@@ -147,7 +147,7 @@ export const EditTestModal: React.FC<EditTestModalProps> = ({ test, isOpen, onCl
                     max={14}
                     value={form.delaiJours}
                     onChange={(e) => setForm({ ...form, delaiJours: Number(e.target.value) })}
-                    className="w-full px-3.5 py-2.5 rounded-lg border border-[#c0c9c3] bg-[#faf8ff] text-xs text-[#131b2e] focus:outline-none focus:border-[#1b4d3e] font-mono"
+                    className="w-full px-3.5 py-2.5 rounded-lg border border-[#C3CEDA] bg-[#F7F9FC] text-xs text-[#131b2e] focus:outline-none focus:border-[#14456F] font-mono"
                   />
                 </div>
               </div>
@@ -162,7 +162,7 @@ export const EditTestModal: React.FC<EditTestModalProps> = ({ test, isOpen, onCl
                   placeholder="Ex: Défi Développeur : Composant React de commande mobile à Ouaga"
                   value={form.titre}
                   onChange={(e) => setForm({ ...form, titre: e.target.value })}
-                  className="w-full px-3.5 py-2.5 rounded-lg border border-[#c0c9c3] bg-[#faf8ff] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#1b4d3e]"
+                  className="w-full px-3.5 py-2.5 rounded-lg border border-[#C3CEDA] bg-[#F7F9FC] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#14456F]"
                 />
               </div>
 
@@ -173,7 +173,7 @@ export const EditTestModal: React.FC<EditTestModalProps> = ({ test, isOpen, onCl
                 <select
                   value={form.typeRendu}
                   onChange={(e) => setForm({ ...form, typeRendu: e.target.value as TypeRenduTest })}
-                  className="w-full px-3.5 py-2.5 rounded-lg border border-[#c0c9c3] bg-[#faf8ff] text-xs text-[#131b2e] focus:outline-none focus:border-[#1b4d3e]"
+                  className="w-full px-3.5 py-2.5 rounded-lg border border-[#C3CEDA] bg-[#F7F9FC] text-xs text-[#131b2e] focus:outline-none focus:border-[#14456F]"
                 >
                   <option value="texte">Texte libre argumenté</option>
                   <option value="lien">Lien externe (GitHub, Figma, Google Drive, Loom)</option>
@@ -192,7 +192,7 @@ export const EditTestModal: React.FC<EditTestModalProps> = ({ test, isOpen, onCl
                   placeholder="Décrivez précisément le contexte, la mise en situation, les contraintes et ce que vous attendez du candidat..."
                   value={form.consignes}
                   onChange={(e) => setForm({ ...form, consignes: e.target.value })}
-                  className="w-full px-3.5 py-2.5 rounded-lg border border-[#c0c9c3] bg-[#faf8ff] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#1b4d3e]"
+                  className="w-full px-3.5 py-2.5 rounded-lg border border-[#C3CEDA] bg-[#F7F9FC] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#14456F]"
                 />
               </div>
 
@@ -207,19 +207,19 @@ export const EditTestModal: React.FC<EditTestModalProps> = ({ test, isOpen, onCl
                     placeholder="Ex: Lien vers repo GitHub public ou démo en ligne"
                     value={newLivrable}
                     onChange={(e) => setNewLivrable(e.target.value)}
-                    className="flex-1 px-3.5 py-2 rounded-lg border border-[#c0c9c3] bg-[#faf8ff] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#1b4d3e]"
+                    className="flex-1 px-3.5 py-2 rounded-lg border border-[#C3CEDA] bg-[#F7F9FC] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#14456F]"
                   />
                   <button
                     type="button"
                     onClick={handleAddLivrable}
-                    className="px-3.5 py-2 bg-[#faf8ff] hover:bg-[#eaedff] text-[#003629] rounded-lg text-xs font-bold border border-[#c0c9c3] cursor-pointer"
+                    className="px-3.5 py-2 bg-[#F7F9FC] hover:bg-[#E1EAF2] text-[#0B2A4A] rounded-lg text-xs font-bold border border-[#C3CEDA] cursor-pointer"
                   >
                     Ajouter
                   </button>
                 </div>
                 <div className="space-y-1">
                   {form.livrablesAttendus.map((l, i) => (
-                    <div key={i} className="flex items-center justify-between text-xs bg-[#faf8ff] px-3 py-2 rounded-lg border border-[#e2e7ff] text-[#131b2e]">
+                    <div key={i} className="flex items-center justify-between text-xs bg-[#F7F9FC] px-3 py-2 rounded-lg border border-[#D9E2EC] text-[#131b2e]">
                       <span>• {l}</span>
                       <button type="button" onClick={() => handleRemoveLivrable(i)} className="text-[#707974] hover:text-rose-600 cursor-pointer">
                         <Trash2 className="w-3.5 h-3.5" />
@@ -240,19 +240,19 @@ export const EditTestModal: React.FC<EditTestModalProps> = ({ test, isOpen, onCl
                     placeholder="Ex: Rigueur d'exécution et réactivité mobile"
                     value={newCritere}
                     onChange={(e) => setNewCritere(e.target.value)}
-                    className="flex-1 px-3.5 py-2 rounded-lg border border-[#c0c9c3] bg-[#faf8ff] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#1b4d3e]"
+                    className="flex-1 px-3.5 py-2 rounded-lg border border-[#C3CEDA] bg-[#F7F9FC] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#14456F]"
                   />
                   <button
                     type="button"
                     onClick={handleAddCritere}
-                    className="px-3.5 py-2 bg-[#faf8ff] hover:bg-[#eaedff] text-[#003629] rounded-lg text-xs font-bold border border-[#c0c9c3] cursor-pointer"
+                    className="px-3.5 py-2 bg-[#F7F9FC] hover:bg-[#E1EAF2] text-[#0B2A4A] rounded-lg text-xs font-bold border border-[#C3CEDA] cursor-pointer"
                   >
                     Ajouter
                   </button>
                 </div>
                 <div className="space-y-1">
                   {form.criteresEvaluation.map((c, i) => (
-                    <div key={i} className="flex items-center justify-between text-xs bg-[#faf8ff] px-3 py-2 rounded-lg border border-[#e2e7ff] text-[#131b2e]">
+                    <div key={i} className="flex items-center justify-between text-xs bg-[#F7F9FC] px-3 py-2 rounded-lg border border-[#D9E2EC] text-[#131b2e]">
                       <span>• {c}</span>
                       <button type="button" onClick={() => handleRemoveCritere(i)} className="text-[#707974] hover:text-rose-600 cursor-pointer">
                         <Trash2 className="w-3.5 h-3.5" />
@@ -263,7 +263,7 @@ export const EditTestModal: React.FC<EditTestModalProps> = ({ test, isOpen, onCl
               </div>
 
               {/* Action Buttons */}
-              <div className="pt-3 border-t border-[#e2e7ff] flex items-center justify-between">
+              <div className="pt-3 border-t border-[#D9E2EC] flex items-center justify-between">
                 <button
                   type="button"
                   onClick={onClose}
@@ -273,7 +273,7 @@ export const EditTestModal: React.FC<EditTestModalProps> = ({ test, isOpen, onCl
                 </button>
                 <button
                   type="submit"
-                  className="px-5 py-2.5 rounded-lg bg-[#1b4d3e] hover:bg-[#003629] text-white font-bold text-xs shadow-xs transition-colors cursor-pointer"
+                  className="px-5 py-2.5 rounded-lg bg-[#14456F] hover:bg-[#0B2A4A] text-white font-bold text-xs shadow-xs transition-colors cursor-pointer"
                 >
                   {isEditing ? 'Mettre à jour le modèle' : 'Créer le modèle de test'}
                 </button>

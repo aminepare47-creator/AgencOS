@@ -43,7 +43,7 @@ export const CollaboratorsTab: React.FC<CollaboratorsTabProps> = ({ onOpenAddCol
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h2 className="text-xl font-bold text-[#003629] font-display">
+          <h2 className="text-xl font-bold text-[#0B2A4A] font-display">
             Registre des Collaborateurs Officiels
           </h2>
           <p className="text-xs sm:text-sm text-[#545f73] mt-0.5">
@@ -54,7 +54,7 @@ export const CollaboratorsTab: React.FC<CollaboratorsTabProps> = ({ onOpenAddCol
         <button
           onClick={onOpenAddCollab}
           id="btn-add-collaborator-tab"
-          className="px-4 py-2.5 rounded-lg bg-[#1b4d3e] hover:bg-[#003629] text-white font-bold text-xs flex items-center gap-2 shadow-xs transition-colors shrink-0 cursor-pointer"
+          className="px-4 py-2.5 rounded-lg bg-[#14456F] hover:bg-[#0B2A4A] text-white font-bold text-xs flex items-center gap-2 shadow-xs transition-colors shrink-0 cursor-pointer"
         >
           <Plus className="w-4 h-4 text-white" />
           <span>Ajouter un collaborateur direct</span>
@@ -62,7 +62,7 @@ export const CollaboratorsTab: React.FC<CollaboratorsTabProps> = ({ onOpenAddCol
       </div>
 
       {/* Filter Bar */}
-      <div className="bg-white p-4 sm:p-5 rounded-2xl border border-[#e2e7ff] shadow-xs grid grid-cols-1 sm:grid-cols-3 gap-3">
+      <div className="bg-white p-4 sm:p-5 rounded-2xl border border-[#D9E2EC] shadow-xs grid grid-cols-1 sm:grid-cols-3 gap-3">
         <div className="relative">
           <Search className="w-4 h-4 text-[#707974] absolute left-3.5 top-3" />
           <input
@@ -70,7 +70,7 @@ export const CollaboratorsTab: React.FC<CollaboratorsTabProps> = ({ onOpenAddCol
             placeholder="Rechercher par nom, spécialité..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-9 pr-3.5 py-2.5 rounded-lg border border-[#c0c9c3] bg-[#faf8ff] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#1b4d3e] focus:bg-white"
+            className="w-full pl-9 pr-3.5 py-2.5 rounded-lg border border-[#C3CEDA] bg-[#F7F9FC] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#14456F] focus:bg-white"
           />
         </div>
 
@@ -78,7 +78,7 @@ export const CollaboratorsTab: React.FC<CollaboratorsTabProps> = ({ onOpenAddCol
           <select
             value={filterStatut}
             onChange={(e) => setFilterStatut(e.target.value)}
-            className="w-full px-3.5 py-2.5 rounded-lg border border-[#c0c9c3] bg-[#faf8ff] text-xs text-[#131b2e] focus:outline-none focus:border-[#1b4d3e] focus:bg-white"
+            className="w-full px-3.5 py-2.5 rounded-lg border border-[#C3CEDA] bg-[#F7F9FC] text-xs text-[#131b2e] focus:outline-none focus:border-[#14456F] focus:bg-white"
           >
             <option value="all">Tous les statuts</option>
             <option value="actif">Collaborateurs actifs uniquement</option>
@@ -90,7 +90,7 @@ export const CollaboratorsTab: React.FC<CollaboratorsTabProps> = ({ onOpenAddCol
           <select
             value={filterPoste}
             onChange={(e) => setFilterPoste(e.target.value)}
-            className="w-full px-3.5 py-2.5 rounded-lg border border-[#c0c9c3] bg-[#faf8ff] text-xs text-[#131b2e] focus:outline-none focus:border-[#1b4d3e] focus:bg-white"
+            className="w-full px-3.5 py-2.5 rounded-lg border border-[#C3CEDA] bg-[#F7F9FC] text-xs text-[#131b2e] focus:outline-none focus:border-[#14456F] focus:bg-white"
           >
             <option value="all">Tous les pôles métiers</option>
             {postes.map(p => (
@@ -110,7 +110,7 @@ export const CollaboratorsTab: React.FC<CollaboratorsTabProps> = ({ onOpenAddCol
             <div
               key={collab.id}
               className={`bg-white rounded-2xl border p-5 sm:p-6 shadow-xs transition-all flex flex-col justify-between ${
-                isActif ? 'border-[#e2e7ff] hover:border-[#1b4d3e]' : 'border-[#e2e7ff] opacity-60 bg-[#faf8ff]'
+                isActif ? 'border-[#D9E2EC] hover:border-[#14456F]' : 'border-[#D9E2EC] opacity-60 bg-[#F7F9FC]'
               }`}
             >
               <div>
@@ -119,12 +119,12 @@ export const CollaboratorsTab: React.FC<CollaboratorsTabProps> = ({ onOpenAddCol
                   <StatusBadge statut={collab.statut} type="collaborateur" />
 
                   {collab.ajouteManuellement ? (
-                    <span className="inline-flex items-center gap-1 text-[10px] font-bold bg-[#eaedff] text-[#003629] border border-[#1b4d3e]/30 px-2.5 py-0.5 rounded-full font-mono">
-                      <ShieldCheck className="w-3 h-3 text-[#1b4d3e]" />
+                    <span className="inline-flex items-center gap-1 text-[10px] font-bold bg-[#E1EAF2] text-[#0B2A4A] border border-[#14456F]/30 px-2.5 py-0.5 rounded-full font-mono">
+                      <ShieldCheck className="w-3 h-3 text-[#14456F]" />
                       Confiance directe
                     </span>
                   ) : (
-                    <span className="inline-flex items-center gap-1 text-[10px] font-bold bg-[#baeed9] text-[#002117] border border-emerald-300 px-2.5 py-0.5 rounded-full font-mono">
+                    <span className="inline-flex items-center gap-1 text-[10px] font-bold bg-[#C9DFF2] text-[#071A2E] border border-emerald-300 px-2.5 py-0.5 rounded-full font-mono">
                       <Award className="w-3 h-3 text-emerald-800" />
                       Validé par test
                     </span>
@@ -137,25 +137,25 @@ export const CollaboratorsTab: React.FC<CollaboratorsTabProps> = ({ onOpenAddCol
                     <img
                       src={collab.avatarUrl}
                       alt={collab.nom}
-                      className="w-12 h-12 rounded-xl object-cover border border-[#c0c9c3] shrink-0"
+                      className="w-12 h-12 rounded-xl object-cover border border-[#C3CEDA] shrink-0"
                     />
                   ) : (
-                    <div className="w-12 h-12 rounded-xl bg-[#faf8ff] text-[#003629] font-bold border border-[#c0c9c3] flex items-center justify-center text-base shrink-0 font-mono">
+                    <div className="w-12 h-12 rounded-xl bg-[#F7F9FC] text-[#0B2A4A] font-bold border border-[#C3CEDA] flex items-center justify-center text-base shrink-0 font-mono">
                       {collab.nom.slice(0, 2).toUpperCase()}
                     </div>
                   )}
 
                   <div>
                     <h3 className="text-sm font-bold text-[#131b2e] font-display">{collab.nom}</h3>
-                    <p className="text-xs font-bold text-[#003629]">{poste?.nom.split('(')[0]}</p>
+                    <p className="text-xs font-bold text-[#0B2A4A]">{poste?.nom.split('(')[0]}</p>
                     <p className="text-[11px] text-[#707974]">{collab.ville}</p>
                   </div>
                 </div>
 
                 {/* Specialite & Notes */}
                 {collab.specialite && (
-                  <div className="bg-[#faf8ff] p-3 rounded-xl text-xs text-[#131b2e] mb-3.5 border border-[#e2e7ff]">
-                    <span className="font-bold text-[#003629] block text-[10px] uppercase tracking-wider mb-0.5 font-mono">
+                  <div className="bg-[#F7F9FC] p-3 rounded-xl text-xs text-[#131b2e] mb-3.5 border border-[#D9E2EC]">
+                    <span className="font-bold text-[#0B2A4A] block text-[10px] uppercase tracking-wider mb-0.5 font-mono">
                       Spécialité opérationnelle :
                     </span>
                     {collab.specialite}
@@ -163,7 +163,7 @@ export const CollaboratorsTab: React.FC<CollaboratorsTabProps> = ({ onOpenAddCol
                 )}
 
                 {/* Contact details */}
-                <div className="space-y-1.5 text-xs text-[#545f73] mb-4 pt-2 border-t border-[#e2e7ff] font-mono">
+                <div className="space-y-1.5 text-xs text-[#545f73] mb-4 pt-2 border-t border-[#D9E2EC] font-mono">
                   <div className="flex items-center gap-2">
                     <Phone className="w-3.5 h-3.5 text-[#707974]" />
                     <span>{collab.telephone}</span>
@@ -176,7 +176,7 @@ export const CollaboratorsTab: React.FC<CollaboratorsTabProps> = ({ onOpenAddCol
               </div>
 
               {/* Bottom Actions */}
-              <div className="pt-3 border-t border-[#e2e7ff] flex items-center justify-between text-xs">
+              <div className="pt-3 border-t border-[#D9E2EC] flex items-center justify-between text-xs">
                 <span className="text-[11px] text-[#707974] font-mono">
                   Entrée : {collab.dateEntree}
                 </span>

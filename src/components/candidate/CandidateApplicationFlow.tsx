@@ -143,16 +143,16 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
   };
 
   return (
-    <div className="pt-28 pb-20 bg-[#faf8ff] min-h-screen text-[#131b2e]">
+    <div className="pt-28 pb-20 bg-[#F7F9FC] min-h-screen text-[#131b2e]">
       <div className="max-w-[1100px] mx-auto px-4 sm:px-6">
         
         {/* Header Badge & Title (Stitch Mockup 6 style) */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#eaedff] text-[#003629] text-xs font-mono font-bold uppercase tracking-wider mb-4 border border-[#c0c9c3]/50">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E1EAF2] text-[#0B2A4A] text-xs font-mono font-bold uppercase tracking-wider mb-4 border border-[#C3CEDA]/50">
             <span className="w-2 h-2 rounded-full bg-emerald-600"></span>
             <span>CADRE DE RECRUTEMENT • SESSION EN COURS Q2</span>
           </div>
-          <h1 className="font-display font-bold text-3xl sm:text-4xl text-[#003629] tracking-tight mb-3">
+          <h1 className="font-display font-bold text-3xl sm:text-4xl text-[#0B2A4A] tracking-tight mb-3">
             Parcours Collaborateur & Concours Technique
           </h1>
           <p className="text-[#545f73] text-sm sm:text-base leading-relaxed">
@@ -176,14 +176,14 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
                 key={s.num}
                 className={`p-4 rounded-xl border transition-all ${
                   isActive 
-                    ? 'bg-[#1b4d3e] text-white border-[#003629] shadow-sm'
+                    ? 'bg-[#14456F] text-white border-[#0B2A4A] shadow-sm'
                     : isDone
-                    ? 'bg-[#baeed9]/40 text-[#003629] border-[#c0c9c3]'
-                    : 'bg-white text-[#545f73] border-[#e2e7ff]'
+                    ? 'bg-[#C9DFF2]/40 text-[#0B2A4A] border-[#C3CEDA]'
+                    : 'bg-white text-[#545f73] border-[#D9E2EC]'
                 }`}
               >
                 <div className="flex items-center justify-between mb-1">
-                  <span className={`font-mono text-xs font-bold uppercase ${isActive ? 'text-[#baeed9]' : isDone ? 'text-emerald-700' : 'text-[#707974]'}`}>
+                  <span className={`font-mono text-xs font-bold uppercase ${isActive ? 'text-[#C9DFF2]' : isDone ? 'text-emerald-700' : 'text-[#707974]'}`}>
                     {s.title}
                   </span>
                   {isDone && <CheckCircle2 className="w-4 h-4 text-emerald-700" />}
@@ -201,12 +201,12 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
         {/* ========================================================================= */}
         {currentStep === 1 && (
           <div className="space-y-6">
-            <div className="bg-white rounded-2xl border border-[#e2e7ff] p-6 sm:p-8 shadow-xs">
+            <div className="bg-white rounded-2xl border border-[#D9E2EC] p-6 sm:p-8 shadow-xs">
               <div className="mb-6">
-                <span className="font-mono text-xs uppercase tracking-wider text-[#1b4d3e] font-bold">
+                <span className="font-mono text-xs uppercase tracking-wider text-[#C9A227] font-bold">
                   POSTES OUVERTS AU BURKINA FASO
                 </span>
-                <h2 className="font-display font-bold text-xl sm:text-2xl text-[#003629] mt-1">
+                <h2 className="font-display font-bold text-xl sm:text-2xl text-[#0B2A4A] mt-1">
                   Sélectionnez le corps de métier pour lequel vous postulez
                 </h2>
                 <p className="text-xs sm:text-sm text-[#545f73] mt-1">
@@ -225,27 +225,27 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
                       onClick={() => isHiring && handleSelectPoste(poste.id)}
                       className={`rounded-xl border p-5 transition-all relative flex flex-col justify-between ${
                         !isHiring 
-                          ? 'opacity-60 bg-[#f2f3ff] border-[#e2e7ff] cursor-not-allowed'
+                          ? 'opacity-60 bg-[#EEF3F8] border-[#D9E2EC] cursor-not-allowed'
                           : isSelected
-                          ? 'bg-[#f2f3ff] border-2 border-[#1b4d3e] shadow-sm cursor-pointer'
-                          : 'bg-white hover:bg-[#faf8ff] border-[#c0c9c3] hover:border-[#1b4d3e] cursor-pointer'
+                          ? 'bg-[#EEF3F8] border-2 border-[#14456F] shadow-sm cursor-pointer'
+                          : 'bg-white hover:bg-[#F7F9FC] border-[#C3CEDA] hover:border-[#14456F] cursor-pointer'
                       }`}
                     >
                       <div>
                         <div className="flex items-center justify-between mb-3">
-                          <div className="w-10 h-10 rounded-lg bg-[#eaedff] text-[#003629] flex items-center justify-center">
+                          <div className="w-10 h-10 rounded-lg bg-[#E1EAF2] text-[#0B2A4A] flex items-center justify-center">
                             {getPosteIcon(poste.codeMetier)}
                           </div>
                           <span className={`text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${
                             isHiring 
-                              ? 'bg-[#baeed9] text-[#002117]'
-                              : 'bg-[#e2e7ff] text-[#545f73]'
+                              ? 'bg-[#C9DFF2] text-[#071A2E]'
+                              : 'bg-[#D9E2EC] text-[#545f73]'
                           }`}>
                             {isHiring ? 'Session Ouverte' : 'Bientôt disponible'}
                           </span>
                         </div>
 
-                        <h3 className="font-display font-bold text-base text-[#003629] mb-1.5">
+                        <h3 className="font-display font-bold text-base text-[#0B2A4A] mb-1.5">
                           {poste.nom}
                         </h3>
                         <p className="text-xs text-[#545f73] mb-4 leading-relaxed">
@@ -258,7 +258,7 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
                           </span>
                           <div className="flex flex-wrap gap-1.5">
                             {poste.competencesCles.map(c => (
-                              <span key={c} className="text-[11px] bg-white text-[#131b2e] border border-[#e2e7ff] px-2 py-0.5 rounded font-medium">
+                              <span key={c} className="text-[11px] bg-white text-[#131b2e] border border-[#D9E2EC] px-2 py-0.5 rounded font-medium">
                                 {c}
                               </span>
                             ))}
@@ -270,8 +270,8 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
                         disabled={!isHiring}
                         className={`w-full py-2.5 px-4 rounded-lg text-xs font-bold flex items-center justify-center gap-2 transition-colors cursor-pointer ${
                           !isHiring
-                            ? 'bg-[#e2e7ff] text-[#707974] cursor-not-allowed'
-                            : 'bg-[#1b4d3e] hover:bg-[#003629] text-white shadow-sm'
+                            ? 'bg-[#D9E2EC] text-[#707974] cursor-not-allowed'
+                            : 'bg-[#14456F] hover:bg-[#0B2A4A] text-white shadow-sm'
                         }`}
                       >
                         <span>Choisir ce profil et continuer</span>
@@ -289,21 +289,21 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
         {/* ÉTAPE 2 : FORMULAIRE D'INFORMATIONS DU CANDIDAT                           */}
         {/* ========================================================================= */}
         {currentStep === 2 && (
-          <div className="bg-white rounded-2xl border border-[#e2e7ff] shadow-xs p-6 sm:p-8">
-            <div className="flex items-center justify-between border-b border-[#e2e7ff] pb-4 mb-6">
+          <div className="bg-white rounded-2xl border border-[#D9E2EC] shadow-xs p-6 sm:p-8">
+            <div className="flex items-center justify-between border-b border-[#D9E2EC] pb-4 mb-6">
               <div>
-                <span className="text-xs font-mono font-bold text-[#1b4d3e] flex items-center gap-1.5 mb-1">
+                <span className="text-xs font-mono font-bold text-[#14456F] flex items-center gap-1.5 mb-1">
                   <Briefcase className="w-3.5 h-3.5" />
                   Poste ciblé : {currentPoste?.nom}
                 </span>
-                <h2 className="font-display font-bold text-xl sm:text-2xl text-[#003629]">
+                <h2 className="font-display font-bold text-xl sm:text-2xl text-[#0B2A4A]">
                   Renseignez vos coordonnées de contact
                 </h2>
               </div>
               <button
                 type="button"
                 onClick={() => setCurrentStep(1)}
-                className="text-xs font-medium text-[#545f73] hover:text-[#003629] flex items-center gap-1 cursor-pointer"
+                className="text-xs font-medium text-[#545f73] hover:text-[#0B2A4A] flex items-center gap-1 cursor-pointer"
               >
                 <ArrowLeft className="w-3.5 h-3.5" />
                 Changer de profil
@@ -323,7 +323,7 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
                     placeholder="Ex: Oumar Compaoré"
                     value={candidatForm.nom}
                     onChange={(e) => setCandidatForm({ ...candidatForm, nom: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-lg border border-[#c0c9c3] bg-[#faf8ff] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#1b4d3e] focus:bg-white"
+                    className="w-full px-3.5 py-2.5 rounded-lg border border-[#C3CEDA] bg-[#F7F9FC] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#14456F] focus:bg-white"
                   />
                 </div>
 
@@ -338,7 +338,7 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
                     placeholder="Ex: oumar.dev@gmail.com"
                     value={candidatForm.email}
                     onChange={(e) => setCandidatForm({ ...candidatForm, email: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-lg border border-[#c0c9c3] bg-[#faf8ff] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#1b4d3e] focus:bg-white"
+                    className="w-full px-3.5 py-2.5 rounded-lg border border-[#C3CEDA] bg-[#F7F9FC] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#14456F] focus:bg-white"
                   />
                 </div>
               </div>
@@ -355,7 +355,7 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
                     placeholder="+226 70 11 22 33"
                     value={candidatForm.telephone}
                     onChange={(e) => setCandidatForm({ ...candidatForm, telephone: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-lg border border-[#c0c9c3] bg-[#faf8ff] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#1b4d3e] focus:bg-white font-mono"
+                    className="w-full px-3.5 py-2.5 rounded-lg border border-[#C3CEDA] bg-[#F7F9FC] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#14456F] focus:bg-white font-mono"
                   />
                 </div>
 
@@ -367,7 +367,7 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
                     id="cand-ville"
                     value={candidatForm.ville}
                     onChange={(e) => setCandidatForm({ ...candidatForm, ville: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-lg border border-[#c0c9c3] bg-[#faf8ff] text-xs text-[#131b2e] focus:outline-none focus:border-[#1b4d3e] focus:bg-white"
+                    className="w-full px-3.5 py-2.5 rounded-lg border border-[#C3CEDA] bg-[#F7F9FC] text-xs text-[#131b2e] focus:outline-none focus:border-[#14456F] focus:bg-white"
                   >
                     <option value="Ouagadougou">Ouagadougou</option>
                     <option value="Bobo-Dioulasso">Bobo-Dioulasso</option>
@@ -386,7 +386,7 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
                     id="cand-exp"
                     value={candidatForm.anneesExperience}
                     onChange={(e) => setCandidatForm({ ...candidatForm, anneesExperience: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-lg border border-[#c0c9c3] bg-[#faf8ff] text-xs text-[#131b2e] focus:outline-none focus:border-[#1b4d3e] focus:bg-white"
+                    className="w-full px-3.5 py-2.5 rounded-lg border border-[#C3CEDA] bg-[#F7F9FC] text-xs text-[#131b2e] focus:outline-none focus:border-[#14456F] focus:bg-white"
                   >
                     <option value="Moins d'1 an (Débutant motivé)">Moins d'1 an (Débutant)</option>
                     <option value="1 à 2 ans">1 à 2 ans</option>
@@ -407,7 +407,7 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
                     placeholder="https://..."
                     value={candidatForm.portfolioUrl}
                     onChange={(e) => setCandidatForm({ ...candidatForm, portfolioUrl: e.target.value })}
-                    className="w-full px-3.5 py-2 rounded-lg border border-[#c0c9c3] bg-[#faf8ff] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#1b4d3e] focus:bg-white font-mono"
+                    className="w-full px-3.5 py-2 rounded-lg border border-[#C3CEDA] bg-[#F7F9FC] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#14456F] focus:bg-white font-mono"
                   />
                 </div>
 
@@ -421,7 +421,7 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
                     placeholder="https://..."
                     value={candidatForm.githubUrl}
                     onChange={(e) => setCandidatForm({ ...candidatForm, githubUrl: e.target.value })}
-                    className="w-full px-3.5 py-2 rounded-lg border border-[#c0c9c3] bg-[#faf8ff] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#1b4d3e] focus:bg-white font-mono"
+                    className="w-full px-3.5 py-2 rounded-lg border border-[#C3CEDA] bg-[#F7F9FC] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#14456F] focus:bg-white font-mono"
                   />
                 </div>
               </div>
@@ -436,14 +436,14 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
                   placeholder="En quelques lignes : votre rapport aux outils numériques, vos réalisations antérieures au Burkina Faso ou vos disponibilités..."
                   value={candidatForm.presentation}
                   onChange={(e) => setCandidatForm({ ...candidatForm, presentation: e.target.value })}
-                  className="w-full px-3.5 py-2 rounded-lg border border-[#c0c9c3] bg-[#faf8ff] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#1b4d3e] focus:bg-white"
+                  className="w-full px-3.5 py-2 rounded-lg border border-[#C3CEDA] bg-[#F7F9FC] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#14456F] focus:bg-white"
                 />
               </div>
 
-              <div className="p-4 rounded-xl bg-[#f2f3ff] border border-[#c0c9c3]/50 text-xs text-[#131b2e] flex items-start gap-3">
-                <ShieldCheck className="w-5 h-5 text-[#1b4d3e] shrink-0 mt-0.5" />
+              <div className="p-4 rounded-xl bg-[#EEF3F8] border border-[#C3CEDA]/50 text-xs text-[#131b2e] flex items-start gap-3">
+                <ShieldCheck className="w-5 h-5 text-[#14456F] shrink-0 mt-0.5" />
                 <p>
-                  <strong className="text-[#003629]">Épreuve pratique immédiate :</strong> À la validation de cette étape, un jeton privé unique vous donnera accès au test technique homologué pour le profil <strong className="text-[#003629]">{currentPoste?.nom}</strong>.
+                  <strong className="text-[#0B2A4A]">Épreuve pratique immédiate :</strong> À la validation de cette étape, un jeton privé unique vous donnera accès au test technique homologué pour le profil <strong className="text-[#0B2A4A]">{currentPoste?.nom}</strong>.
                 </p>
               </div>
 
@@ -457,7 +457,7 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
                 </button>
                 <button
                   type="submit"
-                  className="px-6 py-3 rounded-lg bg-[#1b4d3e] hover:bg-[#003629] text-white font-bold text-xs flex items-center gap-2 shadow-sm transition-colors cursor-pointer"
+                  className="px-6 py-3 rounded-lg bg-[#14456F] hover:bg-[#0B2A4A] text-white font-bold text-xs flex items-center gap-2 shadow-sm transition-colors cursor-pointer"
                 >
                   <span>Accéder à mon épreuve technique privée</span>
                   <ArrowRight className="w-4 h-4" />
@@ -474,14 +474,14 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
           <div className="space-y-6">
             
             {/* Header Token Box */}
-            <div className="bg-[#003629] text-white rounded-2xl p-6 sm:p-8 shadow-md">
+            <div className="bg-[#0B2A4A] text-white rounded-2xl p-6 sm:p-8 shadow-md">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/15 pb-4 mb-4">
                 <div>
                   <div className="flex items-center gap-2 mb-1.5">
-                    <span className="p-1 rounded bg-[#baeed9]/20 text-[#baeed9]">
+                    <span className="p-1 rounded bg-[#C9DFF2]/20 text-[#C9DFF2]">
                       <Lock className="w-4 h-4" />
                     </span>
-                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#baeed9]">
+                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C9DFF2]">
                       SESSION TECHNIQUE OFFICIELLE SCELLÉE
                     </span>
                   </div>
@@ -489,12 +489,12 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
                     {currentTestTemplate?.titre}
                   </h2>
                   <p className="text-xs text-white/70 mt-0.5">
-                    Candidat : <strong className="text-white">{candidatForm.nom}</strong> · Référence : <code className="text-[#baeed9] font-mono font-bold">{activeCodeSuivi}</code>
+                    Candidat : <strong className="text-white">{candidatForm.nom}</strong> · Référence : <code className="text-[#C9DFF2] font-mono font-bold">{activeCodeSuivi}</code>
                   </p>
                 </div>
 
                 <div className="flex items-center gap-3 bg-white/10 px-4 py-2 rounded-xl border border-white/15 shrink-0">
-                  <Clock className="w-5 h-5 text-[#baeed9]" />
+                  <Clock className="w-5 h-5 text-[#C9DFF2]" />
                   <div>
                     <span className="text-[10px] text-white/60 block font-mono">Délai alloué</span>
                     <span className="text-xs font-bold text-white font-mono">{currentTestTemplate?.delaiJours} jours ouvrés</span>
@@ -509,7 +509,7 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
                 <button
                   type="button"
                   onClick={handleCopyPrivateUrl}
-                  className="px-4 py-2 rounded-lg bg-[#baeed9] hover:bg-[#9ed1bd] text-[#002117] text-xs font-bold flex items-center justify-center gap-1.5 transition-colors shrink-0 cursor-pointer"
+                  className="px-4 py-2 rounded-lg bg-[#C9DFF2] hover:bg-[#A7C7E0] text-[#071A2E] text-xs font-bold flex items-center justify-center gap-1.5 transition-colors shrink-0 cursor-pointer"
                 >
                   {copiedLink ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                   <span>{copiedLink ? 'Lien copié !' : 'Copier lien privé'}</span>
@@ -518,13 +518,13 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
             </div>
 
             {/* Test Subject & Instructions */}
-            <div className="bg-white rounded-2xl border border-[#e2e7ff] p-6 sm:p-8 shadow-xs space-y-6">
+            <div className="bg-white rounded-2xl border border-[#D9E2EC] p-6 sm:p-8 shadow-xs space-y-6">
               <div>
-                <h3 className="font-display font-bold text-base text-[#003629] uppercase tracking-wider mb-3 flex items-center gap-2">
-                  <FileText className="w-4 h-4 text-[#1b4d3e]" />
+                <h3 className="font-display font-bold text-base text-[#0B2A4A] uppercase tracking-wider mb-3 flex items-center gap-2">
+                  <FileText className="w-4 h-4 text-[#14456F]" />
                   Directives et énoncé de l'épreuve
                 </h3>
-                <div className="bg-[#faf8ff] p-5 rounded-xl border border-[#e2e7ff] text-xs sm:text-sm text-[#131b2e] whitespace-pre-line leading-relaxed font-sans">
+                <div className="bg-[#F7F9FC] p-5 rounded-xl border border-[#D9E2EC] text-xs sm:text-sm text-[#131b2e] whitespace-pre-line leading-relaxed font-sans">
                   {currentTestTemplate?.consignes}
                 </div>
               </div>
@@ -551,7 +551,7 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {currentTestTemplate?.criteresEvaluation.map((crit, idx) => (
-                    <span key={idx} className="text-xs bg-[#f2f3ff] text-[#003629] border border-[#c0c9c3]/50 px-3 py-1 rounded-lg font-mono font-medium">
+                    <span key={idx} className="text-xs bg-[#EEF3F8] text-[#0B2A4A] border border-[#C3CEDA]/50 px-3 py-1 rounded-lg font-mono font-medium">
                       • {crit}
                     </span>
                   ))}
@@ -559,8 +559,8 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
               </div>
 
               {/* Restitution Form */}
-              <form onSubmit={handleTestSubmit} className="pt-6 border-t border-[#e2e7ff] space-y-5">
-                <h3 className="font-display font-bold text-lg text-[#003629]">
+              <form onSubmit={handleTestSubmit} className="pt-6 border-t border-[#D9E2EC] space-y-5">
+                <h3 className="font-display font-bold text-lg text-[#0B2A4A]">
                   Bordereau de Restitution du Test
                 </h3>
 
@@ -575,7 +575,7 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
                     placeholder="Détaillez vos choix techniques, vos arbitrages pour la connectivité locale ou collez le texte demandé..."
                     value={contenuTexte}
                     onChange={(e) => setContenuTexte(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-lg border border-[#c0c9c3] bg-[#faf8ff] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#1b4d3e] focus:bg-white"
+                    className="w-full px-3.5 py-2.5 rounded-lg border border-[#C3CEDA] bg-[#F7F9FC] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#14456F] focus:bg-white"
                   />
                 </div>
 
@@ -588,7 +588,7 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
                     <button
                       type="button"
                       onClick={handleAddLinkInput}
-                      className="text-xs text-[#003629] hover:underline font-bold flex items-center gap-1 cursor-pointer"
+                      className="text-xs text-[#0B2A4A] hover:underline font-bold flex items-center gap-1 cursor-pointer"
                     >
                       <Plus className="w-3.5 h-3.5" />
                       Ajouter un lien
@@ -605,14 +605,14 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
                             placeholder="https://github.com/... ou https://figma.com/..."
                             value={lien}
                             onChange={(e) => handleUpdateLink(idx, e.target.value)}
-                            className="w-full pl-9 pr-3 py-2 rounded-lg border border-[#c0c9c3] bg-[#faf8ff] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#1b4d3e] focus:bg-white font-mono"
+                            className="w-full pl-9 pr-3 py-2 rounded-lg border border-[#C3CEDA] bg-[#F7F9FC] text-xs text-[#131b2e] placeholder:text-[#707974] focus:outline-none focus:border-[#14456F] focus:bg-white font-mono"
                           />
                         </div>
                         {liensExternes.length > 1 && (
                           <button
                             type="button"
                             onClick={() => handleRemoveLink(idx)}
-                            className="p-2 text-[#707974] hover:text-red-600 rounded-lg hover:bg-[#f2f3ff] cursor-pointer"
+                            className="p-2 text-[#707974] hover:text-red-600 rounded-lg hover:bg-[#EEF3F8] cursor-pointer"
                           >
                             <Trash2 className="w-4 h-4" />
                           </button>
@@ -627,10 +627,10 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
                   <label className="block text-xs font-bold text-[#131b2e] mb-1">
                     Pièce jointe / Archive (optionnel - ZIP, PDF, maquettes)
                   </label>
-                  <div className="border-2 border-dashed border-[#c0c9c3] hover:border-[#1b4d3e] rounded-xl p-5 text-center bg-[#faf8ff] transition-colors">
+                  <div className="border-2 border-dashed border-[#C3CEDA] hover:border-[#14456F] rounded-xl p-5 text-center bg-[#F7F9FC] transition-colors">
                     <Upload className="w-6 h-6 text-[#545f73] mx-auto mb-2" />
                     {uploadedFileName ? (
-                      <div className="flex items-center justify-center gap-2 text-xs font-bold text-[#003629]">
+                      <div className="flex items-center justify-center gap-2 text-xs font-bold text-[#0B2A4A]">
                         <FileText className="w-4 h-4" />
                         <span>Fichier rattaché : {uploadedFileName} (1.8 Mo)</span>
                         <button
@@ -649,7 +649,7 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
                         <button
                           type="button"
                           onClick={() => setUploadedFileName(`${candidatForm.nom.toLowerCase().replace(/\s+/g, '-')}-livrable-test.zip`)}
-                          className="text-xs px-3 py-1.5 bg-white border border-[#c0c9c3] rounded-lg text-[#003629] font-bold hover:bg-[#eaedff] cursor-pointer"
+                          className="text-xs px-3 py-1.5 bg-white border border-[#C3CEDA] rounded-lg text-[#0B2A4A] font-bold hover:bg-[#E1EAF2] cursor-pointer"
                         >
                           Simuler le rattachement d'une archive ZIP
                         </button>
@@ -658,14 +658,14 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
                   </div>
                 </div>
 
-                <div className="pt-4 flex items-center justify-between border-t border-[#e2e7ff]">
+                <div className="pt-4 flex items-center justify-between border-t border-[#D9E2EC]">
                   <span className="text-xs text-[#545f73]">
                     Le test sera immédiatement transmis dans le registre du Directeur.
                   </span>
 
                   <button
                     type="submit"
-                    className="px-6 py-3 rounded-lg bg-[#1b4d3e] hover:bg-[#003629] text-white font-bold text-xs flex items-center gap-2 shadow-sm transition-colors cursor-pointer"
+                    className="px-6 py-3 rounded-lg bg-[#14456F] hover:bg-[#0B2A4A] text-white font-bold text-xs flex items-center gap-2 shadow-sm transition-colors cursor-pointer"
                   >
                     <span>Transmettre mon épreuve pour évaluation</span>
                     <ArrowRight className="w-4 h-4" />
@@ -681,17 +681,17 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
         {/* ÉTAPE 4 : CONFIRMATION & SUIVI OFFICIEL                                   */}
         {/* ========================================================================= */}
         {currentStep === 4 && (
-          <div className="bg-white rounded-2xl border border-[#e2e7ff] p-8 sm:p-10 shadow-sm space-y-8">
+          <div className="bg-white rounded-2xl border border-[#D9E2EC] p-8 sm:p-10 shadow-sm space-y-8">
             
             {/* Header Status Confirmation */}
             <div className="text-center max-w-xl mx-auto">
-              <div className="w-16 h-16 rounded-full bg-[#baeed9] text-[#003629] flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 rounded-full bg-[#C9DFF2] text-[#0B2A4A] flex items-center justify-center mx-auto mb-4">
                 <CheckCircle2 className="w-8 h-8" />
               </div>
-              <span className="font-mono text-xs font-bold uppercase tracking-wider text-[#003629] bg-[#eaedff] px-3 py-1 rounded-full">
+              <span className="font-mono text-xs font-bold uppercase tracking-wider text-[#0B2A4A] bg-[#E1EAF2] px-3 py-1 rounded-full">
                 DOSSIER ENREGISTRÉ SOUS SCEAU OFFICIEL
               </span>
-              <h2 className="font-display font-bold text-2xl sm:text-3xl text-[#003629] mt-3">
+              <h2 className="font-display font-bold text-2xl sm:text-3xl text-[#0B2A4A] mt-3">
                 Votre candidature a été transmise avec succès !
               </h2>
               <p className="text-xs sm:text-sm text-[#545f73] mt-2 leading-relaxed">
@@ -700,20 +700,20 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
             </div>
 
             {/* Official Receipt Card (Stitch Mockup 6 style) */}
-            <div className="max-w-2xl mx-auto rounded-2xl border-2 border-[#1b4d3e] bg-[#faf8ff] p-6 sm:p-8">
-              <div className="flex items-center justify-between border-b border-[#c0c9c3] pb-4 mb-4">
+            <div className="max-w-2xl mx-auto rounded-2xl border-2 border-[#14456F] bg-[#F7F9FC] p-6 sm:p-8">
+              <div className="flex items-center justify-between border-b border-[#C3CEDA] pb-4 mb-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded bg-[#003629] text-white flex items-center justify-center font-bold text-xs">
+                  <div className="w-8 h-8 rounded bg-[#0B2A4A] text-white flex items-center justify-center font-bold text-xs">
                     AOS
                   </div>
                   <div>
-                    <span className="font-display font-bold text-sm text-[#003629] block">Récépissé de Dépôt de Candidature</span>
+                    <span className="font-display font-bold text-sm text-[#0B2A4A] block">Récépissé de Dépôt de Candidature</span>
                     <span className="text-[10px] font-mono text-[#545f73]">BURKINA FASO · OUAGADOUGOU</span>
                   </div>
                 </div>
                 <button
                   onClick={() => window.print()}
-                  className="hidden sm:flex items-center gap-1.5 text-xs text-[#003629] font-bold hover:underline cursor-pointer"
+                  className="hidden sm:flex items-center gap-1.5 text-xs text-[#0B2A4A] font-bold hover:underline cursor-pointer"
                 >
                   <Printer className="w-3.5 h-3.5" />
                   <span>Imprimer le reçu</span>
@@ -723,7 +723,7 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-xs mb-6">
                 <div>
                   <span className="text-[#545f73] font-mono block text-[10px] uppercase">Numéro Unique</span>
-                  <span className="font-mono font-bold text-sm text-[#003629]">{activeCodeSuivi}</span>
+                  <span className="font-mono font-bold text-sm text-[#0B2A4A]">{activeCodeSuivi}</span>
                 </div>
                 <div>
                   <span className="text-[#545f73] font-mono block text-[10px] uppercase">Statut Actuel</span>
@@ -738,24 +738,24 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
               </div>
 
               {/* 4 Life-cycle milestones */}
-              <div className="border-t border-[#e2e7ff] pt-4">
+              <div className="border-t border-[#D9E2EC] pt-4">
                 <span className="text-[10px] font-mono uppercase tracking-wider text-[#707974] block mb-3 font-bold">
                   Cycle de vie de votre dossier :
                 </span>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-xs">
-                  <div className="p-2.5 rounded-lg bg-[#baeed9]/40 border border-emerald-300">
+                  <div className="p-2.5 rounded-lg bg-[#C9DFF2]/40 border border-emerald-300">
                     <span className="text-[10px] font-mono font-bold text-emerald-800 block">JALON 1</span>
                     <span className="font-bold text-emerald-950 text-[11px]">Dossier Reçu</span>
                   </div>
-                  <div className="p-2.5 rounded-lg bg-[#baeed9]/40 border border-emerald-300">
+                  <div className="p-2.5 rounded-lg bg-[#C9DFF2]/40 border border-emerald-300">
                     <span className="text-[10px] font-mono font-bold text-emerald-800 block">JALON 2</span>
                     <span className="font-bold text-emerald-950 text-[11px]">Test Rendu</span>
                   </div>
-                  <div className="p-2.5 rounded-lg bg-[#eaedff] border border-[#1b4d3e] text-[#003629]">
-                    <span className="text-[10px] font-mono font-bold text-[#1b4d3e] block">JALON 3</span>
+                  <div className="p-2.5 rounded-lg bg-[#E1EAF2] border border-[#14456F] text-[#0B2A4A]">
+                    <span className="text-[10px] font-mono font-bold text-[#14456F] block">JALON 3</span>
                     <span className="font-bold text-[11px]">Instruction Dir.</span>
                   </div>
-                  <div className="p-2.5 rounded-lg bg-white border border-[#e2e7ff] text-[#707974]">
+                  <div className="p-2.5 rounded-lg bg-white border border-[#D9E2EC] text-[#707974]">
                     <span className="text-[10px] font-mono font-bold block">JALON 4</span>
                     <span className="text-[11px]">Décision Finale</span>
                   </div>
@@ -767,7 +767,7 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
               <button
                 onClick={() => onOpenTrackingWithCode(activeCodeSuivi)}
-                className="w-full sm:w-auto px-6 py-3 rounded-lg bg-[#1b4d3e] hover:bg-[#003629] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition-colors cursor-pointer"
+                className="w-full sm:w-auto px-6 py-3 rounded-lg bg-[#14456F] hover:bg-[#0B2A4A] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition-colors cursor-pointer"
               >
                 <span>Ouvrir l'écran de suivi en direct</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -778,7 +778,7 @@ export const CandidateApplicationFlow: React.FC<CandidateApplicationFlowProps> =
                   setPublicView('home');
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="w-full sm:w-auto px-6 py-3 rounded-lg bg-[#f2f3ff] hover:bg-[#eaedff] text-[#003629] border border-[#c0c9c3] font-bold text-xs flex items-center justify-center gap-2 transition-colors cursor-pointer"
+                className="w-full sm:w-auto px-6 py-3 rounded-lg bg-[#EEF3F8] hover:bg-[#E1EAF2] text-[#0B2A4A] border border-[#C3CEDA] font-bold text-xs flex items-center justify-center gap-2 transition-colors cursor-pointer"
               >
                 <ArrowLeft className="w-4 h-4" />
                 <span>Retourner à l'accueil</span>
