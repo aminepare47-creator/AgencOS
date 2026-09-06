@@ -1,6 +1,0 @@
-{
-  "name": "AgenceOS - Digitalisation & Ingénierie Numérique Burkina Faso",
-  "description": "Plateforme web AgenceOS au Burkina Faso : digitalisation complète des entreprises, boost digital, recrutement technique en 4 étapes et tableau de bord de direction.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
