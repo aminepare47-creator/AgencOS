@@ -3,15 +3,13 @@ import { useApp } from '../../context/AppContext';
 import { 
   Phone, 
   Mail, 
-  MapPin, 
   Send, 
   CheckCircle2, 
   Clock, 
   MessageSquare, 
   ShieldCheck, 
-  Building2, 
   FileText,
-  ChevronDown,
+
   HelpCircle,
   ArrowRight
 } from 'lucide-react';
@@ -19,7 +17,6 @@ import {
 export const ContactSection: React.FC = () => {
   const { setIsQuoteModalOpen, submitDemandeDevis } = useApp();
   const [submitted, setSubmitted] = useState(false);
-  const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   const [formData, setFormData] = useState({
     nom: '',
@@ -51,25 +48,6 @@ export const ContactSection: React.FC = () => {
     setSubmitted(true);
   };
 
-  const faqItems = [
-    {
-      q: "Quels sont les délais habituels d'instruction et de cadrage ?",
-      a: "Toute sollicitation adressée via ce bordereau officiel fait l'objet d'un accusé de réception immédiat et d'un premier échange de cadrage technique sous 24 à 48 heures ouvrées par la Direction Technique."
-    },
-    {
-      q: "Quelles sont les modalités de contractualisation proposées ?",
-      a: "Nous intervenons sous deux formules juridiques : soit au forfait ferme avec jalons de livraison datés et pénalités de retard, soit en régie mensuelle agile pour l'accompagnement continu (Boost Digital)."
-    },
-    {
-      q: "Comment sont protégées nos données et secrets d'affaires (NDA) ?",
-      a: "Préalablement à tout échange de données sensibles ou d'accès à vos systèmes existants, nous soumettons un Accord de Confidentialité bilatéral (NDA) régi par le droit commercial burkinabè."
-    },
-    {
-      q: "Vos architectures logicielles sont-elles conformes à la loi CIL du Burkina Faso ?",
-      a: "Absolument. Toutes nos bases de données, flux de paiement Mobile Money et mécanismes d'authentification sont audités pour respecter scrupuleusement la loi N°001-2021/AN relative à la protection des données à caractère personnel."
-    }
-  ];
-
   return (
     <section id="contact-section" className="py-20 bg-[#F7F9FC] text-[#131b2e] border-t border-[#D9E2EC]">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
@@ -84,7 +62,7 @@ export const ContactSection: React.FC = () => {
           </h1>
           <p className="text-[#545f73] text-sm sm:text-base leading-relaxed">
             Pour toute demande institutionnelle, projet de transformation numérique, appel d'offres
-            ou partenariat au Burkina Faso et dans la zone UEMOA, utilisez le bordereau ci-dessous :
+            ou partenariat au Burkina Faso, utilisez le bordereau ci-dessous :
             il constitue le canal officiel d'entrée de votre demande.
           </p>
         </div>
@@ -246,7 +224,7 @@ export const ContactSection: React.FC = () => {
                     className="mt-0.5 rounded border-[#C3CEDA] text-[#14456F] focus:ring-[#14456F]"
                   />
                   <label htmlFor="contact-cil" className="text-[11px] text-[#545f73] leading-relaxed">
-                    J'autorise AgenceOS à traiter ces données conformément aux dispositions de la loi N°001-2021/AN du Burkina Faso relative à la protection des données personnelles (CIL).
+                    J'autorise AgenceOS à me recontacter au sujet de ma demande via les coordonnées fournies ci-dessus.
                   </label>
                 </div>
 
@@ -263,28 +241,28 @@ export const ContactSection: React.FC = () => {
             )}
           </div>
 
-          {/* Right Column (5 cols): Siège Opérationnel & Standard Direction */}
+          {/* Right Column (5 cols): Coordonnées */}
           <div className="lg:col-span-5 space-y-6">
             
             <div className="bg-white rounded-2xl border border-[#D9E2EC] p-6 sm:p-8 shadow-xs space-y-6">
               <div>
                 <span className="font-mono text-xs uppercase tracking-wider text-[#C9A227] font-bold">
-                  STANDARD INSTITUTIONNEL
+                  COORDONNÉES
                 </span>
                 <h3 className="font-display font-bold text-lg text-[#0B2A4A] mt-1">
-                  Siège Opérationnel & Coordonnées
+                  Nous contacter
                 </h3>
               </div>
 
               <div className="space-y-4 text-xs sm:text-sm text-[#131b2e]">
                 <div className="flex items-start gap-3">
                   <div className="w-8 h-8 rounded-lg bg-[#EEF3F8] text-[#0B2A4A] flex items-center justify-center shrink-0 mt-0.5">
-                    <MapPin className="w-4 h-4" />
+                    <Phone className="w-4 h-4" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#0B2A4A]">Adresse Postale & Bureaux</h4>
-                    <p className="text-xs text-[#545f73] mt-0.5">
-                      Avenue Pascal Zagré, Zone 2000, Ouagadougou, Burkina Faso
+                    <h4 className="font-bold text-[#0B2A4A]">Téléphone & WhatsApp</h4>
+                    <p className="text-xs font-mono text-[#545f73] mt-0.5">
+                      +226 55 30 08 68
                     </p>
                   </div>
                 </div>
@@ -294,21 +272,9 @@ export const ContactSection: React.FC = () => {
                     <Clock className="w-4 h-4" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#0B2A4A]">Permanence Opérationnelle</h4>
+                    <h4 className="font-bold text-[#0B2A4A]">Disponibilité</h4>
                     <p className="text-xs text-[#545f73] mt-0.5">
                       Lundi au Vendredi : 08h00 – 17h30 GMT
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-[#EEF3F8] text-[#0B2A4A] flex items-center justify-center shrink-0 mt-0.5">
-                    <Phone className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-[#0B2A4A]">Téléphone & WhatsApp</h4>
-                    <p className="text-xs font-mono text-[#545f73] mt-0.5">
-                      +226 25 30 00 00 / WhatsApp : +226 70 00 00 00
                     </p>
                   </div>
                 </div>
@@ -318,22 +284,12 @@ export const ContactSection: React.FC = () => {
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#0B2A4A]">Courriels Officiels</h4>
+                    <h4 className="font-bold text-[#0B2A4A]">Courriels</h4>
                     <p className="text-xs font-mono text-[#545f73] mt-0.5">
                       contact@agenceos.bf · direction@agenceos.bf
                     </p>
                   </div>
                 </div>
-              </div>
-
-              {/* Mentions Légales & Immatriculation */}
-              <div className="pt-4 border-t border-[#D9E2EC] text-xs text-[#545f73] space-y-1">
-                <p className="font-mono text-[11px]">
-                  <strong>IFU :</strong> 00123456A · <strong>RCCM :</strong> BF-OUA-01-2024-B12-00432
-                </p>
-                <p className="text-[11px]">
-                  Société enregistrée sous l'égide de la Chambre de Commerce et d'Industrie du Burkina Faso (CCI-BF).
-                </p>
               </div>
             </div>
 
@@ -359,51 +315,6 @@ export const ContactSection: React.FC = () => {
 
           </div>
 
-        </div>
-
-        {/* Section FAQ Institutionnelle (Stitch Mockup 4 style) */}
-        <div className="bg-white rounded-2xl border border-[#D9E2EC] p-6 sm:p-10 shadow-xs">
-          <div className="max-w-2xl mb-8">
-            <span className="font-mono text-xs uppercase tracking-wider text-[#C9A227] font-bold">
-              QUESTIONS FRÉQUEMMENT POSÉES
-            </span>
-            <h3 className="font-display font-bold text-2xl text-[#0B2A4A] mt-1">
-              Foire aux questions institutionnelle
-            </h3>
-            <p className="text-xs sm:text-sm text-[#545f73] mt-1">
-              Éléments de réponse sur notre gouvernance, la souveraineté des données et nos engagements.
-            </p>
-          </div>
-
-          <div className="space-y-3">
-            {faqItems.map((item, idx) => {
-              const isOpen = openFaq === idx;
-              return (
-                <div 
-                  key={idx}
-                  className="rounded-xl border border-[#D9E2EC] overflow-hidden transition-colors"
-                >
-                  <button
-                    onClick={() => setOpenFaq(isOpen ? null : idx)}
-                    className="w-full text-left p-4 sm:p-5 flex items-center justify-between gap-4 bg-[#F7F9FC] hover:bg-[#EEF3F8] transition-colors cursor-pointer"
-                  >
-                    <span className="font-display font-bold text-sm sm:text-base text-[#0B2A4A]">
-                      {item.q}
-                    </span>
-                    <ChevronDown className={`w-4 h-4 text-[#545f73] shrink-0 transition-transform ${isOpen ? 'rotate-180 text-[#0B2A4A]' : ''}`} />
-                  </button>
-                  {isOpen && (
-                    <div className="p-4 sm:p-5 bg-white border-t border-[#D9E2EC] text-xs sm:text-sm text-[#545f73] leading-relaxed">
-                      {item.a}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-      </div>
-    </section>
+        </div>\n\n      </div>\n    </section>
   );
 };

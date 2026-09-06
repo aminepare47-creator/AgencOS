@@ -2,25 +2,21 @@ import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { 
   Sparkles, 
-  MapPin, 
   Mail, 
   Phone, 
   Search, 
   UserPlus, 
   ChevronRight,
-  FileCheck,
-  Lock,
   LifeBuoy
 } from 'lucide-react';
 import { POLES_SERVICES } from '../data/polesServices';
 
 interface FooterProps {
   onOpenTrackingWithCode?: (code: string) => void;
-  onOpenDirectorLogin?: () => void;
   onOpenCollabSpace?: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onOpenTrackingWithCode, onOpenDirectorLogin, onOpenCollabSpace }) => {
+export const Footer: React.FC<FooterProps> = ({ onOpenTrackingWithCode, onOpenCollabSpace }) => {
   const { setPublicView, setIsDirectorMode, setIsQuoteModalOpen, setIsCollabSpaceOpen } = useApp();
   const [quickSearchCode, setQuickSearchCode] = useState('');
 
@@ -40,13 +36,13 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTrackingWithCode, onOpenDi
           <div>
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#C9DFF2]/15 text-[#C9DFF2] border border-[#C9DFF2]/30 mb-2 uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5" />
-              DIGITALISATION & INGÉNIERIE BURKINA FASO
+              DIGITALISATION DES ENTREPRISES
             </span>
             <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight font-display">
-              Prêt à digitaliser votre entreprise ou à rejoindre notre équipe ?
+              Prêt à digitaliser votre entreprise ?
             </h3>
             <p className="text-white/70 text-xs sm:text-sm mt-1 max-w-xl">
-              Solutions web, mobiles et accompagnement continu. Basés à Ouagadougou, nous renforçons la souveraineté numérique du Burkina Faso et de la zone UEMOA.
+              Solutions web, mobiles et accompagnement continu des entreprises du Burkina Faso.
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-3 w-full md:w-auto shrink-0">
@@ -70,12 +66,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTrackingWithCode, onOpenDi
           </div>
         </div>
       </div>
-
       {/* Main Footer Content */}
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10">
           
-          {/* Col 1: Identity & Coordonnées (4 cols) */}
+          {/* Col 1: Identity & Contact (4 cols) */}
           <div className="lg:col-span-4 space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-lg bg-[#C9DFF2] text-[#071A2E] font-extrabold flex items-center justify-center text-sm font-display">
@@ -93,34 +88,26 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTrackingWithCode, onOpenDi
             </div>
 
             <p className="text-xs text-white/75 leading-relaxed pr-4">
-              Agence de digitalisation complète des entreprises burkinabè : création de plateformes web & mobiles sécurisées, e-commerce, identité visuelle et régie agile dirigée par un directeur full-stack.
+              Agence de digitalisation des entreprises burkinabè : création de plateformes
+              web & mobiles, e-commerce, identité visuelle et gestion des réseaux sociaux.
             </p>
 
             <div className="pt-2 space-y-2 text-xs text-white/80">
               <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-[#C9DFF2] shrink-0" />
-                <span>Avenue Pascal Zagré, Zone 2000, Ouagadougou, BF</span>
-              </div>
-              <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-[#C9DFF2] shrink-0" />
                 <span className="font-mono font-bold text-white">+226 55 30 08 68</span>
-                <span className="text-[10px] text-[#C9DFF2]/70 font-mono">(Ligne officielle)</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-[#C9DFF2] shrink-0" />
                 <span className="font-mono">contact@agenceos.bf</span>
               </div>
             </div>
-
-            <div className="pt-2 text-[11px] font-mono text-white/50">
-              IFU : 00123456A · RCCM : BF-OUA-01-2024-B12-00432
-            </div>
           </div>
 
           {/* Col 2: The 4 Official Service Poles (3 cols) */}
           <div className="lg:col-span-3 space-y-3">
             <h4 className="text-xs font-mono font-bold text-white uppercase tracking-wider">
-              Pôles de Service Officiels
+              Pôles de Service
             </h4>
             <ul className="space-y-2 text-xs text-white/75">
               {POLES_SERVICES.map(pole => (
@@ -154,7 +141,6 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTrackingWithCode, onOpenDi
               </button>
             </div>
           </div>
-
           {/* Col 3: Recrutement Collaborateurs (2 cols) */}
           <div className="lg:col-span-2 space-y-3">
             <h4 className="text-xs font-mono font-bold text-white uppercase tracking-wider flex items-center gap-1.5">
@@ -253,7 +239,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTrackingWithCode, onOpenDi
                 }}
                 className="w-full flex items-center justify-between text-xs text-white/80 hover:text-[#C9DFF2] transition-colors cursor-pointer py-1"
               >
-                <span>Politique de confidentialité & CIL</span>
+                <span>Politique de confidentialité</span>
                 <ChevronRight className="w-3.5 h-3.5 text-white/40" />
               </button>
             </div>
@@ -261,34 +247,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTrackingWithCode, onOpenDi
 
         </div>
 
-        {/* Bottom Bar: Conformité & Copyright */}
+        {/* Bottom Bar: Copyright */}
         <div className="mt-12 pt-6 border-t border-white/10 text-xs text-white/60 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p>© {new Date().getFullYear()} AgenceOS Burkina Faso · Tous droits réservés.</p>
-          
-          <div className="flex flex-wrap items-center gap-4 text-[11px]">
-            <span className="flex items-center gap-1 text-[#C9DFF2]">
-              <FileCheck className="w-3.5 h-3.5" />
-              Conformité CIL (Loi N°001-2021/AN)
-            </span>
-            <span>·</span>
-            <span>Normes de sécurité ANSSI-BF</span>
-            <span>·</span>
-            {/* Discreet Director login trigger with tiny padlock */}
-            <button
-              onClick={() => {
-                if (onOpenDirectorLogin) {
-                  onOpenDirectorLogin();
-                } else {
-                  setIsDirectorMode(true);
-                }
-              }}
-              className="text-white/25 hover:text-white/70 transition-colors inline-flex items-center gap-1 text-[10px] cursor-pointer"
-              title="Accès administration"
-            >
-              <Lock className="w-2.5 h-2.5" />
-              <span>Admin</span>
-            </button>
-          </div>
         </div>
 
       </div>

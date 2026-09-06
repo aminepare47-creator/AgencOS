@@ -12,7 +12,6 @@ import { QuoteModal } from './components/public/QuoteModal';
 import { CandidateApplicationFlow } from './components/candidate/CandidateApplicationFlow';
 import { TrackApplicationModal } from './components/candidate/TrackApplicationModal';
 import { DirectorDashboard } from './components/director/DirectorDashboard';
-import { DirectorAuthModal } from './components/director/DirectorAuthModal';
 import { CollaborateurSpace } from './components/collaborateur/CollaborateurSpace';
 
 function AppContent() {
@@ -27,7 +26,6 @@ function AppContent() {
 
   const [isTrackModalOpen, setIsTrackModalOpen] = useState(false);
   const [trackInitialCode, setTrackInitialCode] = useState('');
-  const [isDirectorAuthOpen, setIsDirectorAuthOpen] = useState(false);
 
   const handleOpenTrackingWithCode = (code: string) => {
     setTrackInitialCode(code);
@@ -107,7 +105,6 @@ function AppContent() {
       {/* Public Footer */}
       <Footer
         onOpenTrackingWithCode={handleOpenTrackingWithCode}
-        onOpenDirectorLogin={() => setIsDirectorAuthOpen(true)}
         onOpenCollabSpace={() => setIsCollabSpaceOpen(true)}
       />
 
@@ -121,11 +118,6 @@ function AppContent() {
           setTrackInitialCode('');
         }}
         initialCode={trackInitialCode}
-      />
-
-      <DirectorAuthModal
-        isOpen={isDirectorAuthOpen}
-        onClose={() => setIsDirectorAuthOpen(false)}
       />
     </div>
   );

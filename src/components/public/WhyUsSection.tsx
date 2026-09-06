@@ -19,7 +19,7 @@ const ENGAGEMENTS = [
   },
   {
     icon: MapPin,
-    titre: 'Calibré pour le Burkina Faso et la zone UEMOA',
+    titre: 'Calibré pour le Burkina Faso',
     texte:
       "Navigation mobile prioritaire, optimisation des connexions 3G/4G, tunnels WhatsApp et paiements Mobile Money (Orange Money, Moov Money, Wave). Tarification en FCFA.",
     garantie: 'Tarifs en FCFA',

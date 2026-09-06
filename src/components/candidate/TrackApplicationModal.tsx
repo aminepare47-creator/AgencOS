@@ -9,7 +9,6 @@ import {
   AlertCircle, 
   FileText, 
   Award,
-  ArrowRight,
   ShieldCheck,
   UserCheck
 } from 'lucide-react';
@@ -25,7 +24,7 @@ export const TrackApplicationModal: React.FC<TrackApplicationModalProps> = ({
   onClose,
   initialCode = '' 
 }) => {
-  const { candidatures, postes, testTemplates, setIsDirectorMode, setDirectorTab } = useApp();
+  const { candidatures, postes, testTemplates } = useApp();
   const [searchQuery, setSearchQuery] = useState(initialCode);
   const [searched, setSearched] = useState(Boolean(initialCode));
 
@@ -218,25 +217,7 @@ export const TrackApplicationModal: React.FC<TrackApplicationModalProps> = ({
                   </div>
                 </div>
 
-                {/* Shortcut for Director */}
-                <div className="pt-2 border-t border-[#D9E2EC] flex items-center justify-between text-xs">
-                  <span className="text-[#545f73]">
-                    Vous êtes le Directeur ? Évaluez ce test depuis votre tableau de bord.
-                  </span>
-                  <button
-                    onClick={() => {
-                      onClose();
-                      setIsDirectorMode(true);
-                      setDirectorTab('applications');
-                    }}
-                    className="font-bold text-[#0B2A4A] hover:underline flex items-center gap-1 cursor-pointer"
-                  >
-                    <span>Ouvrir l'Espace Direction</span>
-                    <ArrowRight className="w-3 h-3" />
-                  </button>
                 </div>
-
-              </div>
             ) : (
               <div className="py-8 text-center space-y-3 bg-[#F7F9FC] rounded-xl border border-[#D9E2EC] p-6">
                 <AlertCircle className="w-8 h-8 text-[#707974] mx-auto" />

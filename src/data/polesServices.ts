@@ -14,7 +14,7 @@ export const POLES_SERVICES: PoleService[] = [
       'Déploiement de l’infrastructure de base (hébergement haute disponibilité, certificats SSL, CDN)',
       'Configuration du nom de domaine officiel (.bf ou .com) et boîtes courriels professionnelles',
       'Intégration initiale des points de contact (formulaire de devis, redirection WhatsApp entreprise)',
-      'Audit de conformité réglementaire locale (respect de la loi CIL du Burkina Faso)',
+      'Bonnes pratiques de protection des données et de sécurisation du socle technique',
       'Guide technique d’administration remis à vos équipes pour une autonomie totale'
     ],
     technologies: ['React', 'Next.js', 'Tailwind CSS', 'Cloudflare DNS', 'SSL/TLS', 'Infra Cloud'],

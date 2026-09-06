@@ -42,9 +42,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTracking }) => {
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 h-7 flex items-center justify-between text-[10px] font-mono uppercase tracking-wider">
           <span className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-[#C9A227]"></span>
-            Agence de digitalisation agréée · Ouagadougou, Burkina Faso
+            Agence de digitalisation · Burkina Faso
           </span>
-          <span className="hidden sm:inline text-[#C9A227]">Conformité CIL · Loi N°001-2021/AN</span>
         </div>
       </div>
       <div className="h-16 max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -61,7 +60,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTracking }) => {
               AgenceOS
             </span>
             <span className="font-mono text-[10px] text-[#545f73] uppercase tracking-wider mt-0.5 font-medium">
-              Burkina Faso · Étab. numérique
+              Burkina Faso
             </span>
           </div>
         </div>
@@ -111,17 +110,6 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTracking }) => {
           >
             Contact
           </button>
-
-          <button
-            onClick={() => navigateTo('support')}
-            className={`h-full flex items-center px-1 text-sm font-medium transition-colors cursor-pointer ${
-              publicView === 'support' && !isDirectorMode
-                ? 'text-[#0B2A4A] font-bold border-b-2 border-[#0B2A4A]'
-                : 'text-[#404945] hover:text-[#131b2e] border-b-2 border-transparent'
-            }`}
-          >
-            Support
-          </button>
         </nav>
 
         {/* Right CTA Actions */}
@@ -136,16 +124,6 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTracking }) => {
             <Phone className="w-3.5 h-3.5 text-[#14456F]" />
             <span className="font-bold">+226 55 30 08 68</span>
           </a>
-
-          {/* Suivi Candidature quick button */}
-          <button
-            onClick={onOpenTracking}
-            className="hidden sm:flex items-center gap-1.5 text-xs text-[#545f73] hover:text-[#0B2A4A] font-medium px-2.5 py-1.5 rounded-lg hover:bg-[#EEF3F8] transition-colors cursor-pointer"
-            title="Consulter l'état de votre dossier avec votre référence"
-          >
-            <Search className="w-3.5 h-3.5 text-[#545f73]" />
-            <span>Suivi de dossier</span>
-          </button>
 
           {/* Discuter d'un projet Button (Primary Client CTA) */}
           <button
@@ -203,15 +181,6 @@ export const Header: React.FC<HeaderProps> = ({ onOpenTracking }) => {
             }`}
           >
             Contact
-          </button>
-
-          <button
-            onClick={() => navigateTo('support')}
-            className={`w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium ${
-              publicView === 'support' && !isDirectorMode ? 'bg-[#EEF3F8] text-[#0B2A4A] font-bold' : 'text-[#404945]'
-            }`}
-          >
-            Support & Assistance (+226 55 30 08 68)
           </button>
 
           <div className="pt-3 border-t border-[#EEF3F8] space-y-2">
