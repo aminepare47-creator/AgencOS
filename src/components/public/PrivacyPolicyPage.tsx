@@ -150,7 +150,7 @@ export const PrivacyPolicyPage: React.FC = () => {
                 <span>Téléphone / WhatsApp : +226 55 30 08 68</span>
               </div>
               <div className="text-[#545f73] pt-1">
-                Adresse : Avenue Pascal Zagré, Zone 2000, Ouagadougou, Burkina Faso
+                Adresse : Burkina Faso (prestations à distance — adresse physique communiquée sur demande)
               </div>
             </div>
           </section>

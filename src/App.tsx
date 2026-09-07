@@ -5,6 +5,7 @@ import { Footer } from './components/Footer';
 import { Hero } from './components/public/Hero';
 import { ServicesSection } from './components/public/ServicesSection';
 import { WhyUsSection } from './components/public/WhyUsSection';
+import { RealisationsSection } from './components/public/RealisationsSection';
 import { ContactSection } from './components/public/ContactSection';
 import { PrivacyPolicyPage } from './components/public/PrivacyPolicyPage';
 import { SupportPage } from './components/public/SupportPage';
@@ -62,6 +63,7 @@ function AppContent() {
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }} />
             <ServicesSection onOpenQuote={() => setIsQuoteModalOpen(true)} />
+            <RealisationsSection onOpenQuote={() => setIsQuoteModalOpen(true)} />
             <WhyUsSection />
             <ContactSection />
           </>

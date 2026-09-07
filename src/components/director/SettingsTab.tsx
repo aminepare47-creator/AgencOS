@@ -66,7 +66,7 @@ export const SettingsTab: React.FC = () => {
       {resetSuccess && (
         <div className="p-4 bg-[#C9DFF2] border border-emerald-300 rounded-xl text-xs font-bold text-[#071A2E] flex items-center gap-2 font-mono">
           <CheckCircle2 className="w-4 h-4 text-emerald-800" />
-          <span>Données réinitialisées avec succès aux valeurs de démonstration officielles d'AgenceOS !</span>
+          <span>Données réinitialisées avec succès. L'agence repart à zéro : candidatures, collaborateurs et devis effacés.</span>
         </div>
       )}
 
@@ -212,19 +212,19 @@ export const SettingsTab: React.FC = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-[#545f73]">
           <div className="p-3.5 bg-[#F7F9FC] rounded-xl border border-[#D9E2EC]">
-            <span className="font-bold text-[#0B2A4A] block mb-1 font-mono">Bureaux Principaux</span>
-            <p className="text-[#131b2e]">Ouaga 2000, Ouagadougou</p>
-            <p className="text-[#707974]">Burkina Faso (Afrique de l'Ouest)</p>
+            <span className="font-bold text-[#0B2A4A] block mb-1 font-mono">Zone d'activité</span>
+            <p className="text-[#131b2e]">Burkina Faso</p>
+            <p className="text-[#707974]">Prestations à distance, en ligne</p>
           </div>
           <div className="p-3.5 bg-[#F7F9FC] rounded-xl border border-[#D9E2EC]">
-            <span className="font-bold text-[#0B2A4A] block mb-1 font-mono">Pôles Territoriaux</span>
-            <p className="text-[#131b2e]">Ouagadougou & Bobo-Dioulasso</p>
-            <p className="text-[#707974]">Rayonnement UEMOA & Diaspora</p>
+            <span className="font-bold text-[#0B2A4A] block mb-1 font-mono">Mode de travail</span>
+            <p className="text-[#131b2e]">Équipe freelance à distance</p>
+            <p className="text-[#707974]">Local physique prévu à terme</p>
           </div>
           <div className="p-3.5 bg-[#F7F9FC] rounded-xl border border-[#D9E2EC]">
             <span className="font-bold text-[#0B2A4A] block mb-1 font-mono">Canaux Financiers</span>
             <p className="text-[#131b2e]">Orange Money, Moov Money, Wave</p>
-            <p className="text-[#707974]">Virements bancaires UEMOA</p>
+            <p className="text-[#707974]">Virements bancaires</p>
           </div>
         </div>
       </div>
@@ -236,7 +236,7 @@ export const SettingsTab: React.FC = () => {
           <span>Maintenance & Réinitialisation</span>
         </div>
         <p className="text-xs text-rose-900/80">
-          Remet à zéro l'ensemble des candidatures, des collaborateurs et des demandes de devis aux données initiales de référence.
+          Remet à zéro l'ensemble des candidatures, des collaborateurs et des demandes de devis. L'agence repart à zéro, sans aucune donnée pré-chargée.
         </p>
 
         {isResetConfirmOpen ? (
@@ -268,7 +268,7 @@ export const SettingsTab: React.FC = () => {
             className="px-4 py-2 rounded-lg bg-white hover:bg-rose-100 text-rose-800 font-bold text-xs border border-rose-300 transition-colors flex items-center gap-1.5 cursor-pointer font-mono"
           >
             <RotateCcw className="w-3.5 h-3.5 text-rose-700" />
-            <span>Réinitialiser les données de démo</span>
+            <span>Réinitialiser toutes les données (candidatures, collaborateurs, devis)</span>
           </button>
         )}
       </div>
